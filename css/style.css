@@ -47,13 +47,13 @@
 .item-frame {
 	width: 10%;
 	float: left;
-	padding: 10px 5px;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 }
 
 .item-frame>a {
+	padding: 10px 5px;
 	text-decoration: none;
 	display: block;
 	height: 25px;
