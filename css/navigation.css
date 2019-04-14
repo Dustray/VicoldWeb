@@ -12,6 +12,12 @@ input{
     -webkit-appearance : none ;  /*解决iphone safari上的圆角问题*/
     border-radius: 0;
 }
+a,p,li,img{
+    -webkit-user-select:none;
+   -moz-user-select:none;
+   -ms-user-select:none;
+   user-select:none;
+}
 .head {
     text-align: center;
     margin: 35px 5px;
