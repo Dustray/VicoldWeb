@@ -35,7 +35,7 @@
         <div class="main-content">
             <div class="content-search">
                 <div class="search-text-frame">
-                    <input id="search-text" placeholder="请输入搜索内容" class=" search-text" type="text" autocomplete="off" />
+                    <input id="search-text" placeholder="请输入搜索内容" class=" search-text" type="text" autocomplete="off" onfocus="this.select()"/>
                 </div>
 
                 <div class="search-submit-frame">
@@ -133,6 +133,7 @@
     function submit(type) {
         var text = document.getElementById('search-text').value;
         if (text == "") return;
+        $("#search-text").select();
         switch (type) {
             case 0:
                 window.open("https://baidu.com/s?word=" + text); break;
@@ -151,6 +152,7 @@
             case 7:
                 window.open("https://fanyi.baidu.com/?aldtype=85#zh/en/" + text); break;
         }
+        
     }
     function _key() {
         if (event.keyCode == 13) {
