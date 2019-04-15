@@ -20,7 +20,8 @@ a, p, li, img {
     user-select: none;
 }
 .content-go p,
-.head p{
+.head p,
+.site-manage{
     cursor: default;
 }
 
