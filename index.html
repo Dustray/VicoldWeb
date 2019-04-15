@@ -20,22 +20,22 @@
             <input id="go-text" placeholder="请输入网址" class=" content-go search-text" type="text" />
             <input id="go-submit" class=" content-go search-submit" type="button" onclick="go()" value="转到" />
         </div> -->
-        <p>支持996：9点睡，9点起，每天工作6小时</p>
+        <p>支持996工作模式：9点睡，9点起，每天工作6小时</p>
     </div>
     <div class="head trans-all">
         <div class="title" style="overflow:hidden;">
-            <img
-                src="https://image.dustray.cn/vicold/ic_launcher.png" />
-           
+            <img src="https://image.dustray.cn/vicold/ic_launcher.png" />
+
             <p>v1.0</p>
         </div>
-        <p>vicold.com</p>
+        <!-- <p>vicold.com</p> -->
     </div>
     <div class="contrainer">
         <div class="main-content">
             <div class="content-search">
                 <div class="search-text-frame">
-                    <input id="search-text" placeholder="请输入搜索内容" class=" search-text trans-all" type="text" autocomplete="off" onfocus="this.select()"/>
+                    <input id="search-text" placeholder="请输入搜索内容" class=" search-text trans-all" type="text"
+                        autocomplete="off" onfocus="this.select()" />
                 </div>
 
                 <div class="search-submit-frame">
@@ -132,7 +132,8 @@
     }
     function submit(type) {
         var text = document.getElementById('search-text').value;
-        if (text == "") return;
+        if (text == "") return; //为空不响应
+        if (text.focus()==false) return; //不聚焦不响应
         $("#search-text").select();
         switch (type) {
             case 0:
@@ -152,7 +153,7 @@
             case 7:
                 window.open("https://fanyi.baidu.com/?aldtype=85#zh/en/" + text); break;
         }
-        
+
     }
     function _key() {
         if (event.keyCode == 13) {
