@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 
 <head>
     <meta charset="UTF-8">
@@ -8,6 +8,7 @@
     <title>微寒导航</title>
     <link href="css/navigation.css" rel="stylesheet" type="text/css">
     <link href='css/style.css' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="image/logo.png" sizes="32x32">
     <script src="https://www.jq22.com/jquery/1.7.2/jquery.min.js"></script>
     <script src="js/tabulous.js"></script>
 </head>
@@ -133,7 +134,7 @@
     function submit(type) {
         var text = document.getElementById('search-text').value;
         if (text == "") return; //为空不响应
-        if (text.focus()==false) return; //不聚焦不响应
+        // if (text.focus()==false) return; //不聚焦不响应
         $("#search-text").select();
         switch (type) {
             case 0:
