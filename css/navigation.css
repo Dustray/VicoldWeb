@@ -3,6 +3,7 @@
 ::-webkit-scrollbar {
     width: 0px;
 }
+
 body {
     color: #444;
     margin: 0;
@@ -336,7 +337,7 @@ li {
     text-align: center;
     cursor: pointer;
     font-size: 15px;
-    color: rgba(0, 153, 255, 1);
+    color: #3c9bff;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
 }
@@ -347,7 +348,7 @@ li {
 
 .tabs .horizontal li.selectActive {
     background-color: rgba(226, 219, 190, 1);
-    color: rgba(0, 153, 255, 1);
+    color: #3c9bff;
     cursor: default;
 }
 
@@ -466,25 +467,13 @@ li {
     margin-top: 30px;
 }
 
-@media (max-width: 480px) {
-    .site-manage {
-        margin-top: 15px;
-    }
-}
-
-@media (min-width: 480px) {}
-
-@media (min-width: 768px) {}
-
-@media (min-width: 980px) {}
-
 .site-manage>p {
     height: 35px;
     line-height: 35px;
     font-size: 15px;
     display: block;
     text-align: center;
-    color: rgba(0, 153, 255, 1);
+    color: #3c9bff;
     background-color: rgba(233, 233, 233, 0.8);
     padding: 0;
     margin: 0;
@@ -504,8 +493,7 @@ li {
     float: left;
 }
 
-.tool-item-style-frame, 
-.tool-item-link-frame {
+.tool-item-style-frame, .tool-item-link-frame {
     text-align: center;
     overflow: hidden;
     background: rgba(200, 200, 200, 0.3);
@@ -513,16 +501,25 @@ li {
     width: auto;
 }
 
-.tool-item-style-frame>p, .tool-item-link-frame>p {
-    color: #3c9bff;
-    margin: 5px 0 0 0;
-}
 .tool-item-style-frame {
     margin-right: 5px;
 }
 
 .tool-item-link-frame {
     margin-left: 5px;
+}
+
+.tool-item-style-frame>p, .tool-item-link-frame>p {
+    color: #3c9bff;
+    margin: 5px 0 0 0;
+}
+
+.tool-item-style-frame>.tool-item-frame {
+    width: 33.3333333333%;
+}
+
+.tool-item-link-frame>.tool-item-frame {
+    width: 100%;
 }
 
 .tool-item-frame {
@@ -552,9 +549,8 @@ li {
     padding: 10px;
     background-color: #999;
     border-radius: 50px;
-    vertical-align: text-bottom;
-    margin-right: 2px;
-    margin: 0;
+    margin: 0 auto;
+    display: block;
 }
 
 .tool-item-frame>a>p {
@@ -571,7 +567,6 @@ li {
     border: 2px solid #000;
     border-radius: 50px;
     vertical-align: text-bottom;
-    margin-right: 2px;
     margin: 0 auto;
 }
 
@@ -586,6 +581,34 @@ li {
 .tool-item-style-frame .style_red {
     background: #ff3c3c;
 }
+
+@media (max-width: 380px) {
+    .site-manage>.tool-link>div {
+        width: 100%;
+    }
+    .tool-item-style-frame {
+        margin-right: 0;
+    }
+    .tool-item-link-frame {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+}
+
+@media (min-width: 380px) {}
+
+@media (max-width: 480px) {
+    .site-manage {
+        margin-top: 15px;
+    }
+}
+
+@media (min-width: 480px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 980px) {}
+
 /*---------------------------------------------------------------------------*/
 
 /*----------------------------------Manage End----------------------------------*/

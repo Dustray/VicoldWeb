@@ -326,7 +326,7 @@ li {
     line-height: 35px;
     width: 12.5%;
     border: 0 solid;
-    border-radius: 30px;
+    border-radius: 20px;
     text-align: center;
     cursor: pointer;
     font-size: 15px;
@@ -400,8 +400,8 @@ li {
     .item-frame>a>img {}
     .item-frame>a>p {}
     .tabs .horizontal li {
-        height: 45px;
-        line-height: 45px;
+        height: 40px;
+        line-height: 40px;
         font-size: 13px;
     }
 }
@@ -456,14 +456,6 @@ li {
     margin-top: 15px;
 }
 
-@media (max-width: 480px) {}
-
-@media (min-width: 480px) {}
-
-@media (min-width: 768px) {}
-
-@media (min-width: 980px) {}
-
 .site-manage>p {
     height: 35px;
     line-height: 35px;
@@ -477,7 +469,7 @@ li {
 
 .site-manage>.tool-link {
     width: 100%;
-    padding:0 10px 10px 10px;
+    padding: 0 10px 10px 10px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -489,18 +481,12 @@ li {
     float: left;
 }
 
-.tool-item-style-frame, 
-.tool-item-link-frame {
+.tool-item-style-frame, .tool-item-link-frame {
     text-align: center;
     overflow: hidden;
     background: rgba(200, 200, 200, 0.3);
     border-radius: 20px;
     width: auto;
-}
-
-.tool-item-style-frame>p, .tool-item-link-frame>p {
-    color: rgba(255, 255, 255, 0.9);
-    margin: 5px 0 0 0;
 }
 
 .tool-item-style-frame {
@@ -509,6 +495,19 @@ li {
 
 .tool-item-link-frame {
     margin-left: 5px;
+}
+
+.tool-item-style-frame>p, .tool-item-link-frame>p {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 5px 0 0 0;
+}
+
+.tool-item-style-frame>.tool-item-frame {
+    width: 33.3333333333%;
+}
+
+.tool-item-link-frame>.tool-item-frame {
+    width: 100%;
 }
 
 .tool-item-frame {
@@ -531,8 +530,7 @@ li {
     height: 50px;
 }
 
-.tool-item-frame:hover img,
-.tool-item-frame:hover div {
+.tool-item-frame:hover img, .tool-item-frame:hover div {
     box-shadow: 0 0 15px #3c9bff;
 }
 
@@ -542,9 +540,8 @@ li {
     border: 2px solid rgba(255, 255, 255, 0.3);
     padding: 10px;
     border-radius: 50px;
-    vertical-align: text-bottom;
-    margin-right: 2px;
-    margin: 0;
+    margin: 0 auto;
+    display: block;
 }
 
 .tool-item-frame>a>p {
@@ -561,7 +558,6 @@ li {
     border: 2px solid #000;
     border-radius: 50px;
     vertical-align: text-bottom;
-    margin-right: 2px;
     margin: 0 auto;
 }
 
@@ -576,6 +572,27 @@ li {
 .tool-item-style-frame .style_red {
     background: #ff3c3c;
 }
+
+@media (max-width: 380px) {
+    .site-manage>.tool-link>div {
+        width: 100%;
+    }
+    .tool-item-style-frame {
+        margin-right: 0;
+    }
+    .tool-item-link-frame {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 380px) {}
+
+@media (min-width: 480px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 980px) {}
 
 /*---------------------------------------------------------------------------*/
 
