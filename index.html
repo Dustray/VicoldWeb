@@ -15,20 +15,25 @@
     <link rel="icon" href="image/logo.png" sizes="32x32">
     <script>
 
-        var currentstyle = 0;
+        var currentstyle = -1;
         window.onload = function () {
 
 
             var i = getCookie("currentstyle");
             currentstyle = i;
             if (i != null) {
-
-                if (i == 0) {//蓝色，默认
+                if (i === "0") {//蓝色，默认
                     loadjscssfile("css/navigation.css", "css")
                     removejscssfile("css/navigation_ios.css", "css")
-                } else if (i == 1) {//黑色
+                    removejscssfile("css/navigation_red.css", "css")
+                } else if (i === "1") {//黑色
                     loadjscssfile("css/navigation_ios.css", "css")
+                    removejscssfile("css/navigation_red.css", "css")
                     removejscssfile("css/navigation.css", "css")
+                } else if (i === "2") {//红色
+                    loadjscssfile("css/navigation_red.css", "css")
+                    removejscssfile("css/navigation.css", "css")
+                    removejscssfile("css/navigation_ios.css", "css")
                 } else return;
             }
         }
@@ -171,6 +176,11 @@
                                     <div class="style_black trans-all"></div>酷黑
                                 </a>
                             </div>
+                            <div class="tool-item-frame ">
+                                    <a href="javascript:void(0);" class="web-style-black" onclick="changeStyle(2) ">
+                                        <div class="style_red trans-all"></div>中国红
+                                    </a>
+                                </div>
                         </div>
                     </div>
                     <div>
@@ -286,9 +296,15 @@
         if (type == 0) {//蓝色，默认
             loadjscssfile("css/navigation.css", "css")
             removejscssfile("css/navigation_ios.css", "css")
+            removejscssfile("css/navigation_red.css", "css")
         } else if (type == 1) {//黑色
             loadjscssfile("css/navigation_ios.css", "css")
+            removejscssfile("css/navigation_red.css", "css")
             removejscssfile("css/navigation.css", "css")
+        } else if (type == 2) {//红色
+            loadjscssfile("css/navigation_red.css", "css")
+            removejscssfile("css/navigation.css", "css")
+            removejscssfile("css/navigation_ios.css", "css")
         } else return;
         setCookie("currentstyle", type);
         currentstyle = type;
@@ -337,13 +353,16 @@
         var returnvalue = "";//返回值
         if (document.cookie.length > 0) {
             sd = document.cookie.indexOf(search);
+            //alert("ss");
             if (sd != -1) {
                 sd += search.length;
                 end = document.cookie.indexOf(";", sd);
+
                 if (end == -1)
                     end = document.cookie.length;
                 //unescape() 函数可对通过 escape() 编码的字符串进行解码。
-                returnvalue = unescape(document.cookie.substring(sd, end))
+                //alert(document.cookie.substring(sd, end));
+                returnvalue = unescape(document.cookie.substring(sd, end));
             }
         }
         return returnvalue;

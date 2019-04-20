@@ -3,14 +3,13 @@
 ::-webkit-scrollbar {
     width: 0px;
 }
-
 body {
     color: #444;
     margin: 0;
     font-family: 'Microsoft YaHei';
     /* background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554365501049&di=a79839c60599927dd9280e3931a471ed&imgtype=0&src=http%3A%2F%2Fimg.pptjia.com%2Fimage%2F20180321%2F989a0dbcccf3a519a1d8f2604e68a7e2.jpg); */
     /* background-image: url(../image/background.png); */
-    background-image: url(../image/background_continuity_black.png);
+    background-image: url(../image/background_continuity_red.png);
 }
 
 input {
@@ -24,10 +23,6 @@ a, p, li, img {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
-
-input::-webkit-input-placeholder {
-    color: #bbb;
 }
 
 .trans-all {
@@ -79,7 +74,6 @@ input::-webkit-input-placeholder {
 .head>.title>p {
     float: left;
     padding-top: 15px;
-    color: rgba(255, 255, 255, 0.3);
 }
 
 .contrainer {
@@ -154,57 +148,60 @@ input::-webkit-input-placeholder {
 
 .content-search>.search-submit-frame {
     overflow: hidden;
+    background-color: #e2dbbe;
     margin: 0 auto;
 }
 
 .content-search .search-text {
     height: 40px;
     width: 100%;
-    background-color: rgba(200, 200, 200, 0.3);
+    background-color: #eee;
     display: block;
     padding-left: 10px;
     padding-right: 10px;
-    margin: 10px auto;
+    margin: 0 auto;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    font-size: 15px;
-    color: rgba(255, 255, 255, 0.9);
+    font-size: 17px;
+    color: #333;
     border: 0 solid;
-    border-radius: 50px;
+    border-radius: 4px 4px 0 0;
     outline: none;
 }
 
 .content-search .search-text:focus {
-    box-shadow: 0 0 15px #3c9bff;
+    box-shadow: 0 0 15px #fff;
 }
 
 .content-search>.search-submit-frame>div {
     float: left;
     width: 25%;
-    height: 55px;
-    text-align: center;
+    height: 35px;
 }
 
 .content-search .search-submit {
-    background-color: rgba(200, 200, 200, 0.3);
-    color: rgba(255, 255, 255, 0.9);
-    border: 0 solid;
-    border-radius: 50px;
-    margin: 5px 0;
-    width: 45px;
-    height: 45px;
-    text-align: center;
-    font-size: 12px;
-    overflow: hidden;
+    background-color: #e2dbbe;
+    color: #777;
+    border-width: 0px 0px 5px 0px;
+    border-style: solid;
+    border-color: #d2bdae;
+    width: 100%;
+    height: 35px;
     outline: none;
-    padding: 0;
 }
 
 .content-search .search-submit:hover {
-    background-color: rgba(200, 200, 200, 0.3);
-    box-shadow: 0 0 15px #3c9bff;
+    /* background-color: #0E80EF; */
     cursor: pointer;
+    /* Safari 5.1 - 6.0 */
+    background: -webkit-linear-gradient(#e2dbbe, #d2bdae);
+    /* Opera 11.1 - 12.0 */
+    background: -o-linear-gradient(#e2dbbe, #d2bdae);
+    /* Firefox 3.6 - 15 */
+    background: -moz-linear-gradient(#e2dbbe, #d2bdae);
+    /* 标准的语法 */
+    background: linear-gradient(#e2dbbe, #d2bdae);
 }
 
 @media (max-width: 480px) {
@@ -215,9 +212,13 @@ input::-webkit-input-placeholder {
         width: 100%;
     }
     .content-search>.search-submit-frame>div {
+        height: 40px;
         width: 25%;
     }
-    .content-search .search-submit {}
+    .content-search .search-submit {
+        height: 40px;
+        width: 100%;
+    }
 }
 
 @media (min-width: 480px) {
@@ -228,9 +229,11 @@ input::-webkit-input-placeholder {
         width: 100%;
     }
     .content-search>.search-submit-frame>div {
-        width: 12.5%;
+        width: 25%;
     }
-    .content-search .search-submit {}
+    .content-search .search-submit {
+        width: 100%;
+    }
 }
 
 @media (min-width: 768px) {
@@ -243,7 +246,9 @@ input::-webkit-input-placeholder {
     .content-search>.search-submit-frame>div {
         width: 12.5%;
     }
-    .content-search .search-submit {}
+    .content-search .search-submit {
+        width: 100%;
+    }
     .head {
         margin: 50px;
     }
@@ -259,7 +264,9 @@ input::-webkit-input-placeholder {
     .content-search>.search-submit-frame>div {
         width: 12.5%;
     }
-    .content-search .search-submit {}
+    .content-search .search-submit {
+        width: 100%;
+    }
     .head {
         margin: 60px;
     }
@@ -270,7 +277,7 @@ input::-webkit-input-placeholder {
     text-align: center;
     color: #fff;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(233, 233, 233, 0.4);
     ;
 }
 
@@ -303,9 +310,9 @@ li {
 .tabs {
     width: 100%;
     border: 0 solid;
-    border-radius: 20px;
-    background-color: rgba(200, 200, 200, 0.3);
-    margin-top: 15px;
+    border-radius: 0;
+    background: #f6f6f6;
+    margin-top: 30px;
 }
 
 .tabs>div {
@@ -324,25 +331,23 @@ li {
     list-style: none;
     height: 35px;
     line-height: 35px;
+    background-color: rgba(233, 233, 233, 0.8);
     width: 12.5%;
-    border: 0 solid;
-    border-radius: 30px;
     text-align: center;
     cursor: pointer;
     font-size: 15px;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(0, 153, 255, 1);
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
 }
 
 .tabs .horizontal li:hover {
-    background-color: rgba(200, 200, 200, 0.3);
-    color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .tabs .horizontal li.selectActive {
     background-color: rgba(226, 219, 190, 1);
-    color: #3c9bff;
+    color: rgba(0, 153, 255, 1);
     cursor: default;
 }
 
@@ -354,55 +359,60 @@ li {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    padding: 5px;
 }
 
 .item-frame>a {
     padding: 5px 5px 10px 5px;
     text-decoration: none;
     display: block;
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.9);
+    height: 25px;
+    font-size: 15px;
+    color: #555;
     overflow: hidden;
-    text-align: center;
-    height: 50px;
 }
 
-.item-frame:hover img {
-    box-shadow: 0 0 15px #3c9bff;
+.item-frame:hover {
+    background-color: #ddd;
 }
 
 .item-frame>a>img {
     width: 22px;
-    height: 22px;
-    background-color: rgba(200, 200, 200, 0.3);
-    padding: 10px;
-    border: 0 solid;
-    border-radius: 50px;
     vertical-align: text-bottom;
+    height: 22px;
     margin-right: 2px;
-    margin: 0;
 }
 
 .item-frame>a>p {
     text-overflow: ellipsis;
     overflow: hidden;
     display: inline;
-    margin: 0;
-    display: block;
 }
 
 @media (max-width: 480px) {
     /*手机屏幕，图标和文字上下排列*/
+    .tabs {
+        margin-top: 15px;
+    }
     .item-frame {
+        padding: 5px 5px;
         width: 25%;
     }
-    .item-frame>a>img {}
-    .item-frame>a>p {}
+    .item-frame>a {
+        text-align: center;
+        height: 50px;
+    }
+    .item-frame>a>img {
+        margin: 0;
+        height: 27px;
+        width: 27px;
+    }
+    .item-frame>a>p {
+        margin: 0;
+        display: block;
+    }
     .tabs .horizontal li {
-        height: 45px;
-        line-height: 45px;
-        font-size: 13px;
+        height: 40px;
+        line-height: 40px;
     }
 }
 
@@ -423,7 +433,7 @@ li {
         width: 20%;
     }
     .item-frame>a {
-        font-size: 13px;
+        font-size: 17px;
     }
 }
 
@@ -432,7 +442,7 @@ li {
         width: 16.66666666%;
     }
     .item-frame>a {
-        font-size: 13px;
+        font-size: 17px;
     }
 }
 
@@ -450,13 +460,17 @@ li {
 
 .site-manage {
     width: 100%;
-    background-color: rgba(200, 200, 200, 0.3);
     border: 0 solid;
-    border-radius: 20px;
-    margin-top: 15px;
+    border-radius: 0 0 4px 4px;
+    background: #f6f6f6;
+    margin-top: 30px;
 }
 
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+    .site-manage {
+        margin-top: 15px;
+    }
+}
 
 @media (min-width: 480px) {}
 
@@ -470,18 +484,19 @@ li {
     font-size: 15px;
     display: block;
     text-align: center;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(0, 153, 255, 1);
+    background-color: rgba(233, 233, 233, 0.8);
     padding: 0;
     margin: 0;
 }
 
 .site-manage>.tool-link {
     width: 100%;
-    padding:0 10px 10px 10px;
+    overflow: hidden;
+    padding: 10px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    overflow: hidden;
 }
 
 .site-manage>.tool-link>div {
@@ -494,15 +509,14 @@ li {
     text-align: center;
     overflow: hidden;
     background: rgba(200, 200, 200, 0.3);
-    border-radius: 20px;
+    border-radius: 4px;
     width: auto;
 }
 
 .tool-item-style-frame>p, .tool-item-link-frame>p {
-    color: rgba(255, 255, 255, 0.9);
+    color: #3c9bff;
     margin: 5px 0 0 0;
 }
-
 .tool-item-style-frame {
     margin-right: 5px;
 }
@@ -525,22 +539,18 @@ li {
     text-decoration: none;
     display: block;
     font-size: 12px;
-    color: rgba(255, 255, 255, 0.9);
+    color: #555;
     overflow: hidden;
     text-align: center;
     height: 50px;
 }
 
-.tool-item-frame:hover img,
-.tool-item-frame:hover div {
-    box-shadow: 0 0 15px #3c9bff;
-}
-
 .tool-item-frame>a>img {
-    width: 16px;
-    height: 16px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    width: 18px;
+    height: 18px;
+    border: 0 solid #999;
     padding: 10px;
+    background-color: #999;
     border-radius: 50px;
     vertical-align: text-bottom;
     margin-right: 2px;
@@ -556,8 +566,8 @@ li {
 }
 
 .tool-item-style-frame>.tool-item-frame>a>div {
-    width: 36px;
-    height: 36px;
+    width: 34px;
+    height: 34px;
     border: 2px solid #000;
     border-radius: 50px;
     vertical-align: text-bottom;
@@ -576,7 +586,6 @@ li {
 .tool-item-style-frame .style_red {
     background: #ff3c3c;
 }
-
 /*---------------------------------------------------------------------------*/
 
 /*----------------------------------Manage End----------------------------------*/
