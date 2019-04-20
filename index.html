@@ -8,9 +8,32 @@
     <meta name=”Keywords” Content="导航,网址导航,搜索,开发,简洁">
     <meta name=”Description” Content="简洁、好看的网址导航">
     <title>微寒导航</title>
+
+    <link href="css/all.css" rel="stylesheet" type="text/css">
     <link href="css/navigation.css" rel="stylesheet" type="text/css">
     <!-- <link href='css/navigation_ios.css' rel='stylesheet' type='text/css'> -->
     <link rel="icon" href="image/logo.png" sizes="32x32">
+    <script>
+
+        var currentstyle = 0;
+        window.onload = function () {
+
+
+            var i = getCookie("currentstyle");
+            currentstyle = i;
+            if (i != null) {
+
+                if (i == 0) {//蓝色，默认
+                    loadjscssfile("css/navigation.css", "css")
+                    removejscssfile("css/navigation_ios.css", "css")
+                } else if (i == 1) {//黑色
+                    loadjscssfile("css/navigation_ios.css", "css")
+                    removejscssfile("css/navigation.css", "css")
+                } else return;
+            }
+        }
+
+    </script>
     <script src="https://www.jq22.com/jquery/1.7.2/jquery.min.js"></script>
     <script src="js/tabulous.js"></script>
 </head>
@@ -257,23 +280,7 @@
 
 </script>
 <script>
-    window.onload = function () {
 
-
-        var i = getCookie("currentstyle");
-        if (i != null) {
-
-            if (i == 0) {//蓝色，默认
-                loadjscssfile("css/navigation.css", "css")
-                removejscssfile("css/navigation_ios.css", "css")
-            } else if (i == 1) {//黑色
-                loadjscssfile("css/navigation_ios.css", "css")
-                removejscssfile("css/navigation.css", "css")
-            } else return;
-        }
-    }
-
-    var currentstyle = 0;
     function changeStyle(type) {
         if (currentstyle == type) return;
         if (type == 0) {//蓝色，默认
