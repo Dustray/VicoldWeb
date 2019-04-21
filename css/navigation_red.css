@@ -502,9 +502,6 @@ li {
     margin: 5px 0 0 0;
 }
 
-.tool-item-style-frame>.tool-item-frame {
-    width: 33.3333333333%;
-}
 
 .tool-item-link-frame>.tool-item-frame {
     width: 100%;
@@ -562,19 +559,8 @@ li {
     margin: 0 auto;
 }
 
-.tool-item-style-frame .style_blue {
-    background: #3c9bff;
-}
 
-.tool-item-style-frame .style_black {
-    background: #2f2f2f;
-}
-
-.tool-item-style-frame .style_red {
-    background: #ff3c3c;
-}
-
-@media (max-width: 380px) {
+@media (max-width: 500px) {
     .site-manage>.tool-link>div {
         width: 100%;
     }

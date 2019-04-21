@@ -26,15 +26,23 @@
                     loadjscssfile("css/navigation.css", "css")
                     removejscssfile("css/navigation_ios.css", "css")
                     removejscssfile("css/navigation_red.css", "css")
+                    removejscssfile("css/navigation_green.css", "css")
                 } else if (i === "1") {//黑色
                     loadjscssfile("css/navigation_ios.css", "css")
                     removejscssfile("css/navigation_red.css", "css")
                     removejscssfile("css/navigation.css", "css")
+                    removejscssfile("css/navigation_green.css", "css")
                 } else if (i === "2") {//红色
                     loadjscssfile("css/navigation_red.css", "css")
                     removejscssfile("css/navigation.css", "css")
                     removejscssfile("css/navigation_ios.css", "css")
-                } else return;
+                    removejscssfile("css/navigation_green.css", "css")
+                }else if (i === "3") {//绿色
+                    loadjscssfile("css/navigation_green.css", "css")
+                    removejscssfile("css/navigation.css", "css")
+                    removejscssfile("css/navigation_ios.css", "css")
+                    removejscssfile("css/navigation_red.css", "css")
+                }  else return;
             }
         }
 
@@ -167,18 +175,23 @@
                             <p>主题</p>
                             <div class="tool-item-frame">
                                 <a href="javascript:void(0);" class="web-style-blue" onclick="changeStyle(0) ">
-                                    <div class=" style_blue trans-all"></div>湛蓝
+                                    <div class=" style_blue trans-all"></div>清湛蓝
                                 </a>
                             </div>
 
                             <div class="tool-item-frame ">
                                 <a href="javascript:void(0);" class="web-style-black" onclick="changeStyle(1) ">
-                                    <div class="style_black trans-all"></div>酷黑
+                                    <div class="style_black trans-all"></div>墨岩黑
                                 </a>
                             </div>
                             <div class="tool-item-frame ">
                                     <a href="javascript:void(0);" class="web-style-black" onclick="changeStyle(2) ">
                                         <div class="style_red trans-all"></div>中国红
+                                    </a>
+                                </div>
+                                <div class="tool-item-frame ">
+                                    <a href="javascript:void(0);" class="web-style-black" onclick="changeStyle(3) ">
+                                        <div class="style_green trans-all"></div>极光绿
                                     </a>
                                 </div>
                         </div>
@@ -297,14 +310,22 @@
             loadjscssfile("css/navigation.css", "css")
             removejscssfile("css/navigation_ios.css", "css")
             removejscssfile("css/navigation_red.css", "css")
+                    removejscssfile("css/navigation_green.css", "css")
         } else if (type == 1) {//黑色
             loadjscssfile("css/navigation_ios.css", "css")
             removejscssfile("css/navigation_red.css", "css")
             removejscssfile("css/navigation.css", "css")
+                    removejscssfile("css/navigation_green.css", "css")
         } else if (type == 2) {//红色
             loadjscssfile("css/navigation_red.css", "css")
             removejscssfile("css/navigation.css", "css")
             removejscssfile("css/navigation_ios.css", "css")
+                    removejscssfile("css/navigation_green.css", "css")
+        }else if (type == 3) {//红色
+            loadjscssfile("css/navigation_green.css", "css")
+            removejscssfile("css/navigation.css", "css")
+            removejscssfile("css/navigation_ios.css", "css")
+                    removejscssfile("css/navigation_red.css", "css")
         } else return;
         setCookie("currentstyle", type);
         currentstyle = type;
