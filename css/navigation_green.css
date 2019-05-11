@@ -141,7 +141,6 @@ a, p, li, img {
     width: 100%;
 }
 
-.content-search {}
 
 .content-search>.search-text-frame {
     margin: 0 auto;
@@ -153,6 +152,9 @@ a, p, li, img {
     margin: 0 auto;
 }
 
+.search-submit-frame{
+    border-radius:0 0 4px  4px;
+}
 .content-search .search-text {
     height: 40px;
     width: 100%;
@@ -167,7 +169,7 @@ a, p, li, img {
     font-size: 17px;
     color: #333;
     border: 0 solid;
-    border-radius: 4px;
+    border-radius: 4px 4px 0 0;
     outline: none;
 }
 
@@ -302,11 +304,14 @@ li {
 .tabs {
     width: 100%;
     border: 0 solid;
-    border-radius: 0;
+    border-radius: 4px;
     background: #f6f6f6;
     margin-top: 30px;
 }
+.tabs >ul{
+    border-radius: 4px;
 
+}
 .tabs>div {
     padding: 10px;
     overflow: hidden;
@@ -351,6 +356,7 @@ li {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    border-radius: 4px;
 }
 
 .item-frame>a {
@@ -453,7 +459,7 @@ li {
 .site-manage {
     width: 100%;
     border: 0 solid;
-    border-radius: 0 0 4px 4px;
+    border-radius: 4px;
     background: #f6f6f6;
     margin-top: 30px;
 }
@@ -468,6 +474,7 @@ li {
     background-color: rgba(233, 233, 233, 0.8);
     padding: 0;
     margin: 0;
+    border-radius: 4px;
 }
 
 .site-manage>.tool-link {
