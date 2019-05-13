@@ -141,7 +141,9 @@ a, p, li, img {
     width: 100%;
 }
 
-.content-search {}
+.content-search {
+    margin-top: 5px;
+}
 
 .content-search>.search-text-frame {
     margin: 0 auto;
