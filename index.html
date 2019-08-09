@@ -14,11 +14,8 @@
     <!-- <link href='css/navigation_ios.css' rel='stylesheet' type='text/css'> -->
     <link rel="icon" href="image/logo.png" sizes="32x32">
     <script>
-
         var currentstyle = -1;
         window.onload = function () {
-
-
             var i = getCookie("currentstyle");
             currentstyle = i;
             if (i != null) {
@@ -37,12 +34,12 @@
                     removejscssfile("css/navigation.css", "css")
                     removejscssfile("css/navigation_ios.css", "css")
                     removejscssfile("css/navigation_green.css", "css")
-                }else if (i === "3") {//绿色
+                } else if (i === "3") {//绿色
                     loadjscssfile("css/navigation_green.css", "css")
                     removejscssfile("css/navigation.css", "css")
                     removejscssfile("css/navigation_ios.css", "css")
                     removejscssfile("css/navigation_red.css", "css")
-                }  else return;
+                } else return;
             }
         }
 
@@ -61,7 +58,7 @@
         <div class="title" style="overflow:hidden;">
             <img src="https://image.dustray.cn/vicold/head_image.png" />
 
-            <p>v1.0</p>
+            <p>v1.1</p>
         </div>
         <!-- <p>vicold.com</p> -->
     </div>
@@ -96,7 +93,7 @@
                     </div>
                     <div>
                         <input id="search-submit" class="search-submit trans-all" type="button" onclick="submit(5)"
-                            value="翻译" />
+                            value="未定" />
                     </div>
                     <div>
                         <input id="search-submit" class="search-submit trans-all" type="button" onclick="submit(6)"
@@ -185,15 +182,15 @@
                                 </a>
                             </div>
                             <div class="tool-item-frame ">
-                                    <a href="javascript:void(0);" class="web-style-black" onclick="changeStyle(2) ">
-                                        <div class="style_red trans-all"></div>中国红
-                                    </a>
-                                </div>
-                                <div class="tool-item-frame ">
-                                    <a href="javascript:void(0);" class="web-style-black" onclick="changeStyle(3) ">
-                                        <div class="style_green trans-all"></div>极光绿
-                                    </a>
-                                </div>
+                                <a href="javascript:void(0);" class="web-style-black" onclick="changeStyle(2) ">
+                                    <div class="style_red trans-all"></div>中国红
+                                </a>
+                            </div>
+                            <div class="tool-item-frame ">
+                                <a href="javascript:void(0);" class="web-style-black" onclick="changeStyle(3) ">
+                                    <div class="style_green trans-all"></div>极光绿
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div>
@@ -204,6 +201,11 @@
                                     href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__cwTRKlURFJBSTAzV1FPSkM0VjM1RzVLOUdWNTdWNS4u">
                                     <img class="trans-all" src="image/add.png" />
                                     推荐链接
+                                </a></div>
+                                <div class="tool-item-frame">
+                                <a target="_blank" href="./about.html">
+                                    <img class="trans-all" src="image/about.png" />
+                                    关于
                                 </a>
                             </div>
                         </div>
@@ -230,7 +232,7 @@
         if (text == "") return; //为空不响应
         // if (text.focus()==false) return; //不聚焦不响应
         $("#search-text").select();
-        text=text.replace("#","%23");
+        text = text.replace("#", "%23");
         switch (type) {
             case 0:
                 window.open("https://baidu.com/s?word=" + text); break;
@@ -241,11 +243,11 @@
             case 3:
                 window.open("https://github.com/search?q=" + text); break;
             case 4:
-                window.open("https://www.cilimao.tv/search?word=" + text); break;
+                window.open("https://www.cilimao.website/search?word=" + text); break;
             case 5:
-                window.open("https://baidu.com/s?word=" + text); break;
+                window.open("#=" + text); break;
             case 6:
-                window.open("https://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1554340401104_R&pv=&ic=&nc=1&z=&hd=&latest=&copyright=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&word=" + text); break;
+                window.open("https://image.baidu.com/search/index?tn=baiduimage&word=" + text); break;
             case 7:
                 window.open("https://fanyi.baidu.com/?aldtype=85#zh/en/" + text); break;
         }
@@ -311,22 +313,22 @@
             loadjscssfile("css/navigation.css", "css")
             removejscssfile("css/navigation_ios.css", "css")
             removejscssfile("css/navigation_red.css", "css")
-                    removejscssfile("css/navigation_green.css", "css")
+            removejscssfile("css/navigation_green.css", "css")
         } else if (type == 1) {//黑色
             loadjscssfile("css/navigation_ios.css", "css")
             removejscssfile("css/navigation_red.css", "css")
             removejscssfile("css/navigation.css", "css")
-                    removejscssfile("css/navigation_green.css", "css")
+            removejscssfile("css/navigation_green.css", "css")
         } else if (type == 2) {//红色
             loadjscssfile("css/navigation_red.css", "css")
             removejscssfile("css/navigation.css", "css")
             removejscssfile("css/navigation_ios.css", "css")
-                    removejscssfile("css/navigation_green.css", "css")
-        }else if (type == 3) {//红色
+            removejscssfile("css/navigation_green.css", "css")
+        } else if (type == 3) {//红色
             loadjscssfile("css/navigation_green.css", "css")
             removejscssfile("css/navigation.css", "css")
             removejscssfile("css/navigation_ios.css", "css")
-                    removejscssfile("css/navigation_red.css", "css")
+            removejscssfile("css/navigation_red.css", "css")
         } else return;
         setCookie("currentstyle", type);
         currentstyle = type;

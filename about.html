@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>关于</title>
+    <link href="css/all.css" rel="stylesheet" type="text/css">
+    <link href="css/navigation.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="image/logo.png" sizes="32x32">
+    <script>
+        var currentstyle = -1;
+        window.onload = function () {
+            var i = getCookie("currentstyle");
+            currentstyle = i;
+            if (i != null) {
+                if (i === "0") {//蓝色，默认
+                    loadjscssfile("css/navigation.css", "css")
+                    removejscssfile("css/navigation_ios.css", "css")
+                    removejscssfile("css/navigation_red.css", "css")
+                    removejscssfile("css/navigation_green.css", "css")
+                } else if (i === "1") {//黑色
+                    loadjscssfile("css/navigation_ios.css", "css")
+                    removejscssfile("css/navigation_red.css", "css")
+                    removejscssfile("css/navigation.css", "css")
+                    removejscssfile("css/navigation_green.css", "css")
+                } else if (i === "2") {//红色
+                    loadjscssfile("css/navigation_red.css", "css")
+                    removejscssfile("css/navigation.css", "css")
+                    removejscssfile("css/navigation_ios.css", "css")
+                    removejscssfile("css/navigation_green.css", "css")
+                } else if (i === "3") {//绿色
+                    loadjscssfile("css/navigation_green.css", "css")
+                    removejscssfile("css/navigation.css", "css")
+                    removejscssfile("css/navigation_ios.css", "css")
+                    removejscssfile("css/navigation_red.css", "css")
+                } else return;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="top-frame">
+        <p>支持996：9点睡，9点起，每天工作6小时</p>
+    </div>
+    <div class="head trans-all">
+        <div class="title" style="overflow:hidden;">
+            <h1>关于</h1>
+
+            <!-- <p>v1.1</p> -->
+        </div>
+        <!-- <p>vicold.com</p> -->
+    </div>
+    <div class="contrainer">
+        <div class="main-content trans-all" style="color:#fff;">
+
+            <div class="trans-all" style="background: rgba(200,200,200,0.4);padding:10px;margin-bottom: 5px;">
+                <h3>Version 1.2</h3>
+                <p>增加“关于”页；<br />修复不能搜索带“#”字符的问题。</p>
+            </div>
+            <div class="trans-all" style="background: rgba(200,200,200,0.4);padding:10px;margin-bottom: 5px;">
+                <h3>Version 1.1</h3>
+                <p>开发多主题模式。</p>
+            </div>
+            <div class="trans-all" style="background: rgba(200,200,200,0.4);padding:10px;margin-bottom: 5px;">
+                <h3>Version 1.0</h3>
+                <p>构建完整项目框架并进行开发。</p>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
