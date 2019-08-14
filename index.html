@@ -92,12 +92,12 @@
                             value="磁力" />
                     </div>
                     <div>
-                        <input id="search-submit" class="search-submit trans-all" type="button" onclick="submit(5)"
-                            value="未定" />
-                    </div>
-                    <div>
                         <input id="search-submit" class="search-submit trans-all" type="button" onclick="submit(6)"
                             value="图片" />
+                    </div>
+                    <div>
+                        <input id="search-submit" class="search-submit trans-all" type="button" onclick="submit(5)"
+                            value="词典" />
                     </div>
                     <div>
                         <input id="search-submit" class="search-submit trans-all" type="button" onclick="submit(7)"
@@ -245,7 +245,7 @@
             case 4:
                 window.open("https://www.cilimao.website/search?word=" + text); break;
             case 5:
-                window.open("#=" + text); break;
+                window.open("https://cn.bing.com/dict/search?q=" + text); break;
             case 6:
                 window.open("https://image.baidu.com/search/index?tn=baiduimage&word=" + text); break;
             case 7:
