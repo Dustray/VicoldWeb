@@ -58,7 +58,7 @@
         <div class="title" style="overflow:hidden;">
             <img src="https://image.dustray.cn/vicold/head_image.png" />
 
-            <p>v1.2</p>
+            <p>v1.2.1</p>
         </div>
         <!-- <p>vicold.com</p> -->
     </div>
@@ -92,11 +92,11 @@
                             value="磁力" />
                     </div>
                     <div>
-                        <input id="search-submit" class="search-submit trans-all" type="button" onclick="submit(6)"
+                        <input id="search-submit" class="search-submit trans-all" type="button" onclick="submit(5)"
                             value="图片" />
                     </div>
                     <div>
-                        <input id="search-submit" class="search-submit trans-all" type="button" onclick="submit(5)"
+                        <input id="search-submit" class="search-submit trans-all" type="button" onclick="submit(6)"
                             value="词典" />
                     </div>
                     <div>
@@ -236,9 +236,9 @@
             case 4:
                 window.open("https://www.cilimao.website/search?word=" + text); break;
             case 5:
-                window.open("https://cn.bing.com/dict/search?q=" + text); break;
-            case 6:
                 window.open("https://image.baidu.com/search/index?tn=baiduimage&word=" + text); break;
+            case 6:
+                window.open("https://cn.bing.com/dict/search?q=" + text); break;
             case 7:
                 window.open("https://fanyi.baidu.com/?aldtype=85#zh/en/" + text); break;
         }
