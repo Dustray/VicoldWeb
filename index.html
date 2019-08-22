@@ -50,7 +50,7 @@
 <style>
 </style>
 
-<body onkeydown="_key()" class="trans-all">
+<body onkeyup="_keyup()" onkeydown="_keydown()" class="trans-all">
     <div class="top-frame">
         <p>支持996：9点睡，9点起，每天工作6小时</p>
     </div>
@@ -202,7 +202,7 @@
                                     <img class="trans-all" src="image/add.png" />
                                     推荐链接
                                 </a></div>
-                                <div class="tool-item-frame">
+                            <div class="tool-item-frame">
                                 <a target="_blank" href="./about.html">
                                     <img class="trans-all" src="image/about.png" />
                                     关于
@@ -217,18 +217,9 @@
 </body>
 <script>
     $("#search-text").focus();
-    function go() {
-        var text = document.getElementById('go-text').value;
-        if (text == "") return;
-        var fdstart = text.indexOf("http");
-        if (fdstart == -1) {
-            text = "http://" + text;
-        }
-        alert(text);
-        window.location.href = text;
-    }
+    var searchs = document.getElementById('search-text');
     function submit(type) {
-        var text = document.getElementById('search-text').value;
+        var text = searchs.value;
         if (text == "") return; //为空不响应
         // if (text.focus()==false) return; //不聚焦不响应
         $("#search-text").select();
@@ -253,17 +244,28 @@
         }
 
     }
-    function _key() {
-        if (event.keyCode == 13) {
-            var gos = document.getElementById('go-text');
-            var searchs = document.getElementById('search-text');
-            if (gos == document.activeElement) {
-                go();
-            } else if (searchs == document.activeElement) {
+    var secondKeyPressed=false;
+    function _keydown() {
+        if (searchs == document.activeElement) {
+            if (event.keyCode == 13) {
                 submit(0);
+            } else if(event.altKey){
+                //var type = 0;
+                switch (event.keyCode) {
+                    case 90: submit( 1); break;//z
+                    case 88: submit( 2); break;//x
+                    case 67: submit( 3); break;//c
+                    case 86: submit( 4); break;//v
+                    case 66: submit( 5); break;//b
+                    case 78: submit( 6); break;//n
+                    case 77: submit( 7); break;//m
+                }
+               // submit(type);
             }
+
         }
     }
+
 </script>
 
 <script type="text/javascript">
@@ -392,5 +394,6 @@
         return returnvalue;
     }
 </script>
+
 
 </html>
