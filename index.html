@@ -58,7 +58,7 @@
         <div class="title" style="overflow:hidden;">
             <img src="https://image.dustray.cn/vicold/head_image.png" />
 
-            <p>v1.2.1</p>
+            <p>v1.2.2</p>
         </div>
         <!-- <p>vicold.com</p> -->
     </div>
@@ -250,7 +250,6 @@
             if (event.keyCode == 13) {
                 submit(0);
             } else if (event.altKey) {
-                //var type = 0;
                 switch (event.keyCode) {
                     case 90: submit(1); break;//z
                     case 88: submit(2); break;//x
@@ -259,12 +258,21 @@
                     case 66: submit(5); break;//b
                     case 78: submit(6); break;//n
                     case 77: submit(7); break;//m
+                    case 191: searchs.value = ""; break;//？
                 }
-                // submit(type);
             }
 
-        } else if (event.keyCode == 13) {
-            searchs.focus();
+        } else {
+            if (event.keyCode == 13) {
+                searchs.focus();
+            } else if (event.altKey) {
+                //var type = 0;
+                switch (event.keyCode) {
+                    case 191:
+                        searchs.focus();
+                        searchs.value = ""; break;//？
+                }
+            }
         }
     }
 </script>
@@ -327,7 +335,7 @@
             removejscssfile("css/navigation.css", "css")
             removejscssfile("css/navigation_ios.css", "css")
             removejscssfile("css/navigation_green.css", "css")
-        } else if (type == 3) {//红色
+        } else if (type == 3) {//绿色
             loadjscssfile("css/navigation_green.css", "css")
             removejscssfile("css/navigation.css", "css")
             removejscssfile("css/navigation_ios.css", "css")
