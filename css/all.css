@@ -1,6 +1,15 @@
+body {
+    background-image: url(../image/background_continuity_common.png);
+    color: #444;
+    margin: 0;
+    font-family: 'Microsoft YaHei';
+}
+
 a,input{
     border: 0 solid ;
+    
 }
+    
 .tool-item-style-frame>.tool-item-frame {
     width: 25%;
 }
@@ -19,6 +28,10 @@ a,input{
     background: #0dacb1;
 }
 
-
-
+a, p, li, img {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
