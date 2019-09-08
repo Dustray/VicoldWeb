@@ -10,7 +10,8 @@ body {
     font-family: 'Microsoft YaHei';
     /* background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554365501049&di=a79839c60599927dd9280e3931a471ed&imgtype=0&src=http%3A%2F%2Fimg.pptjia.com%2Fimage%2F20180321%2F989a0dbcccf3a519a1d8f2604e68a7e2.jpg); */
     /* background-image: url(../image/background.png); */
-    background-image: url(../image/background_continuity_black.png);
+    background-image: url(../image/background_continuity_common.png);
+    background-color: #2f2f2f;
 }
 
 input {
