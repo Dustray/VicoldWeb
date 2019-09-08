@@ -10,8 +10,8 @@
     <title>微寒导航</title>
 
     <link href="css/all.css" rel="stylesheet" type="text/css">
-    <link href="css/navigation.css" rel="stylesheet" type="text/css">
-    <!-- <link href='css/navigation_ios.css' rel='stylesheet' type='text/css'> -->
+    <link href="css/navigation_blue.css" rel="stylesheet" type="text/css">
+    <!-- <link href='css/navigation_black.css' rel='stylesheet' type='text/css'> -->
     <link rel="icon" href="image/logo.png" sizes="32x32">
     <script>
         var currentstyle = -1;
@@ -20,24 +20,24 @@
             currentstyle = i;
             if (i != null) {
                 if (i === "0") {//蓝色，默认
-                    loadjscssfile("css/navigation.css", "css")
-                    removejscssfile("css/navigation_ios.css", "css")
+                    loadjscssfile("css/navigation_blue.css", "css")
+                    removejscssfile("css/navigation_black.css", "css")
                     removejscssfile("css/navigation_red.css", "css")
                     removejscssfile("css/navigation_green.css", "css")
                 } else if (i === "1") {//黑色
-                    loadjscssfile("css/navigation_ios.css", "css")
+                    loadjscssfile("css/navigation_black.css", "css")
                     removejscssfile("css/navigation_red.css", "css")
-                    removejscssfile("css/navigation.css", "css")
+                    removejscssfile("css/navigation_blue.css", "css")
                     removejscssfile("css/navigation_green.css", "css")
                 } else if (i === "2") {//红色
                     loadjscssfile("css/navigation_red.css", "css")
-                    removejscssfile("css/navigation.css", "css")
-                    removejscssfile("css/navigation_ios.css", "css")
+                    removejscssfile("css/navigation_blue.css", "css")
+                    removejscssfile("css/navigation_black.css", "css")
                     removejscssfile("css/navigation_green.css", "css")
                 } else if (i === "3") {//绿色
                     loadjscssfile("css/navigation_green.css", "css")
-                    removejscssfile("css/navigation.css", "css")
-                    removejscssfile("css/navigation_ios.css", "css")
+                    removejscssfile("css/navigation_blue.css", "css")
+                    removejscssfile("css/navigation_black.css", "css")
                     removejscssfile("css/navigation_red.css", "css")
                 } else return;
             }
@@ -321,24 +321,24 @@
     function changeStyle(type) {
         if (currentstyle == type) return;
         if (type == 0) {//蓝色，默认
-            loadjscssfile("css/navigation.css", "css")
-            removejscssfile("css/navigation_ios.css", "css")
+            loadjscssfile("css/navigation_blue.css", "css")
+            removejscssfile("css/navigation_black.css", "css")
             removejscssfile("css/navigation_red.css", "css")
             removejscssfile("css/navigation_green.css", "css")
         } else if (type == 1) {//黑色
-            loadjscssfile("css/navigation_ios.css", "css")
+            loadjscssfile("css/navigation_black.css", "css")
             removejscssfile("css/navigation_red.css", "css")
-            removejscssfile("css/navigation.css", "css")
+            removejscssfile("css/navigation_blue.css", "css")
             removejscssfile("css/navigation_green.css", "css")
         } else if (type == 2) {//红色
             loadjscssfile("css/navigation_red.css", "css")
-            removejscssfile("css/navigation.css", "css")
-            removejscssfile("css/navigation_ios.css", "css")
+            removejscssfile("css/navigation_blue.css", "css")
+            removejscssfile("css/navigation_black.css", "css")
             removejscssfile("css/navigation_green.css", "css")
         } else if (type == 3) {//绿色
             loadjscssfile("css/navigation_green.css", "css")
-            removejscssfile("css/navigation.css", "css")
-            removejscssfile("css/navigation_ios.css", "css")
+            removejscssfile("css/navigation_blue.css", "css")
+            removejscssfile("css/navigation_black.css", "css")
             removejscssfile("css/navigation_red.css", "css")
         } else return;
         setCookie("currentstyle", type);
