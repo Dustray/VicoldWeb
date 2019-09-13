@@ -201,6 +201,9 @@
         // if (text.focus()==false) return; //不聚焦不响应
         $("#search-text").select();
         text = text.replace("#", "%23");
+        text = text.replace("$", "%24");
+        text = text.replace("%", "%25");
+        text = text.replace("&", "%26");
         switch (type) {
             case 0:
                 window.open("https://baidu.com/s?word=" + text); break;
