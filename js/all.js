@@ -5,21 +5,25 @@ function showStyle(){
     currentstyle = i;
     if (i != null) {
         if (i === "0") {//蓝色，默认
+            $("body").css("background-color","#3c9bff");
             loadjscssfile("css/navigation_blue.css", "css")
             removejscssfile("css/navigation_black.css", "css")
             removejscssfile("css/navigation_red.css", "css")
             removejscssfile("css/navigation_green.css", "css")
         } else if (i === "1") {//黑色
+            $("body").css("background-color","#2f2f2f");
             loadjscssfile("css/navigation_black.css", "css")
             removejscssfile("css/navigation_red.css", "css")
             removejscssfile("css/navigation_blue.css", "css")
             removejscssfile("css/navigation_green.css", "css")
         } else if (i === "2") {//红色
+            $("body").css("background-color","#ff3c3c");
             loadjscssfile("css/navigation_red.css", "css")
             removejscssfile("css/navigation_blue.css", "css")
             removejscssfile("css/navigation_black.css", "css")
             removejscssfile("css/navigation_green.css", "css")
         } else if (i === "3") {//绿色
+            $("body").css("background-color","#0dacb1");
             loadjscssfile("css/navigation_green.css", "css")
             removejscssfile("css/navigation_blue.css", "css")
             removejscssfile("css/navigation_black.css", "css")
@@ -31,21 +35,25 @@ function showStyle(){
 function changeStyle(type) {
     if (currentstyle == type) return;
     if (type == 0) {//蓝色，默认
+        $("body").css("background-color","#3c9bff");
         loadjscssfile("css/navigation_blue.css", "css")
         removejscssfile("css/navigation_black.css", "css")
         removejscssfile("css/navigation_red.css", "css")
         removejscssfile("css/navigation_green.css", "css")
     } else if (type == 1) {//黑色
+        $("body").css("background-color","#2f2f2f");
         loadjscssfile("css/navigation_black.css", "css")
         removejscssfile("css/navigation_red.css", "css")
         removejscssfile("css/navigation_blue.css", "css")
         removejscssfile("css/navigation_green.css", "css")
     } else if (type == 2) {//红色
+        $("body").css("background-color","#ff3c3c");
         loadjscssfile("css/navigation_red.css", "css")
         removejscssfile("css/navigation_blue.css", "css")
         removejscssfile("css/navigation_black.css", "css")
         removejscssfile("css/navigation_green.css", "css")
     } else if (type == 3) {//绿色
+        $("body").css("background-color","#0dacb1");
         loadjscssfile("css/navigation_green.css", "css")
         removejscssfile("css/navigation_blue.css", "css")
         removejscssfile("css/navigation_black.css", "css")
