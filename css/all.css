@@ -24,9 +24,16 @@ a,input{
 .tool-item-style-frame .style_red {
     background: #ff3c3c;
 }
+
 .tool-item-style-frame .style_green {
     background: #0dacb1;
 }
+
+.tool-item-style-frame .style_yellow {
+    background: #FFC107;
+}
+
+
 
 a, p, li, img {
     -webkit-user-select: none;

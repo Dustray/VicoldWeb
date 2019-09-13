@@ -10,21 +10,32 @@ function showStyle(){
             removejscssfile("css/navigation_black.css", "css")
             removejscssfile("css/navigation_red.css", "css")
             removejscssfile("css/navigation_green.css", "css")
+            removejscssfile("css/navigation_yellow.css", "css")
         } else if (i === "1") {//黑色
             $("body").css("background-color","#2f2f2f");
             loadjscssfile("css/navigation_black.css", "css")
             removejscssfile("css/navigation_red.css", "css")
             removejscssfile("css/navigation_blue.css", "css")
             removejscssfile("css/navigation_green.css", "css")
+            removejscssfile("css/navigation_yellow.css", "css")
         } else if (i === "2") {//红色
             $("body").css("background-color","#ff3c3c");
             loadjscssfile("css/navigation_red.css", "css")
             removejscssfile("css/navigation_blue.css", "css")
             removejscssfile("css/navigation_black.css", "css")
             removejscssfile("css/navigation_green.css", "css")
+            removejscssfile("css/navigation_yellow.css", "css")
         } else if (i === "3") {//绿色
             $("body").css("background-color","#0dacb1");
             loadjscssfile("css/navigation_green.css", "css")
+            removejscssfile("css/navigation_blue.css", "css")
+            removejscssfile("css/navigation_black.css", "css")
+            removejscssfile("css/navigation_red.css", "css")
+            removejscssfile("css/navigation_yellow.css", "css")
+        } else if (i === "4") {//黄色
+            $("body").css("background-color","#FFC107");
+            loadjscssfile("css/navigation_yellow.css", "css")
+            removejscssfile("css/navigation_green.css", "css")
             removejscssfile("css/navigation_blue.css", "css")
             removejscssfile("css/navigation_black.css", "css")
             removejscssfile("css/navigation_red.css", "css")
@@ -40,25 +51,36 @@ function changeStyle(type) {
         removejscssfile("css/navigation_black.css", "css")
         removejscssfile("css/navigation_red.css", "css")
         removejscssfile("css/navigation_green.css", "css")
+        removejscssfile("css/navigation_yellow.css", "css")
     } else if (type == 1) {//黑色
         $("body").css("background-color","#2f2f2f");
         loadjscssfile("css/navigation_black.css", "css")
         removejscssfile("css/navigation_red.css", "css")
         removejscssfile("css/navigation_blue.css", "css")
         removejscssfile("css/navigation_green.css", "css")
+        removejscssfile("css/navigation_yellow.css", "css")
     } else if (type == 2) {//红色
         $("body").css("background-color","#ff3c3c");
         loadjscssfile("css/navigation_red.css", "css")
         removejscssfile("css/navigation_blue.css", "css")
         removejscssfile("css/navigation_black.css", "css")
         removejscssfile("css/navigation_green.css", "css")
+        removejscssfile("css/navigation_yellow.css", "css")
     } else if (type == 3) {//绿色
         $("body").css("background-color","#0dacb1");
         loadjscssfile("css/navigation_green.css", "css")
         removejscssfile("css/navigation_blue.css", "css")
         removejscssfile("css/navigation_black.css", "css")
         removejscssfile("css/navigation_red.css", "css")
-    } else return;
+        removejscssfile("css/navigation_yellow.css", "css")
+    } else if (type == 4) {//黄色
+        $("body").css("background-color","#FFC107");
+        loadjscssfile("css/navigation_yellow.css", "css")
+        removejscssfile("css/navigation_green.css", "css")
+        removejscssfile("css/navigation_blue.css", "css")
+        removejscssfile("css/navigation_black.css", "css")
+        removejscssfile("css/navigation_red.css", "css")
+    }else return;
     setCookie("currentstyle", type);
     currentstyle = type;
 }
