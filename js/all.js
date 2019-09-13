@@ -1,6 +1,7 @@
 var currentstyle = -1;
 function showStyle(){
     var i = getCookie("currentstyle");
+    console.log(i+"sss");
     currentstyle = i;
     if (i != null) {
         if (i === "0") {//蓝色，默认
