@@ -124,7 +124,7 @@ body {
 }
 
 .content-search {
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .content-search>.search-text-frame {
@@ -156,7 +156,7 @@ body {
 }
 
 .content-search .search-text:focus {
-    box-shadow: 0 0 15px #fff;
+    box-shadow: 0 0 10px #fff;
 }
 
 .content-search>.search-submit-frame>div {

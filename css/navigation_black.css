@@ -158,7 +158,7 @@ input::-webkit-input-placeholder {
 }
 
 .content-search .search-text:focus {
-    box-shadow: 0 0 15px #3c9bff;
+    box-shadow: 0 0 10px #3c9bff;
 }
 
 .content-search>.search-submit-frame>div {
@@ -185,7 +185,7 @@ input::-webkit-input-placeholder {
 
 .content-search .search-submit:hover {
     background-color: rgba(200, 200, 200, 0.3);
-    box-shadow: 0 0 15px #3c9bff;
+    box-shadow: 0 0 5px #3c9bff;
     cursor: pointer;
 }
 
@@ -351,7 +351,7 @@ li {
 }
 
 .item-frame:hover img {
-    box-shadow: 0 0 15px #3c9bff;
+    box-shadow: 0 0 5px #3c9bff;
 }
 
 .item-frame>a>img {
@@ -511,7 +511,7 @@ li {
 }
 
 .tool-item-frame:hover img, .tool-item-frame:hover div {
-    box-shadow: 0 0 15px #3c9bff;
+    box-shadow: 0 0 5px #3c9bff;
 }
 
 .tool-item-frame>a>img {
