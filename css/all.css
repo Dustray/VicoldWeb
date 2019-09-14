@@ -42,3 +42,36 @@ a, p, li, img {
     user-select: none;
 }
 
+
+
+.top-frame,.foot-frame{
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.3);
+    
+}
+.top-frame{
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    background: rgba(233, 233, 233, 0.4);
+}
+.foot-frame{
+    margin: 30px 0 0 0;
+    padding: 10px 0;
+}
+.top-frame>p ,.foot-frame>p,.foot-frame>div{
+    margin: 0;
+}
+.top-frame>p {
+    padding: 10px;
+}
+.foot-frame>p,.foot-frame>div{
+    padding: 1px;
+}

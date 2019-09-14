@@ -30,7 +30,7 @@
     <div class="head trans-all">
         <div class="title" style="overflow:hidden;">
             <img src="https://image.dustray.cn/vicold/head_image.png" />
-            <p>v1.2.4</p>
+            <p>v1.2.5</p>
         </div>
         <!-- <p>vicold.com</p> -->
     </div>
@@ -191,6 +191,10 @@
             </div>
         </div>
     </div>
+    <div class="foot-frame">
+        <div title="MySSL 安全签章" id="myssl_seal" onclick="window.open('https://myssl.com/seal/detail?domain=vicold.com','MySSL安全签章','height=800,width=470,top=0,right=0,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no')" style="text-align: center"><img src="https://sealres.myssl.com/seal/img/2x/seal.png?domain=vicold.com" alt="MySSL 安全签章" style="width: 100px; height: auto; cursor: pointer"></div>
+        <p>Copyright © 2019 vicold.com</p>
+    </div>
 </body>
 <script>
     var searchs = document.getElementById('search-text');
@@ -263,20 +267,7 @@
 
 <script src="js/Bmob-1.7.0.min.js"></script>
 <script>
-
     Bmob.initialize("3bd9d47d34a53d71e471d833b9b4ac6d", "17c0e0f3a6387f922e044502621a5d2a");
-    // function Person(address, createdAt, isEntertainment, linkIcon, linkName, linkType, objectId, updatedAt) {
-    //     this.address = address; 
-    //     this.createdAt = createdAt; 
-    //     this.isEntertainment = isEntertainment;
-    //     this.linkIcon = linkIcon;
-    //     this.linkName = linkName;
-    //     this.linkType = linkType;
-    //     this.objectId = objectId; 
-    //     this.updatedAt = updatedAt;
-    // }
-
-    // var list = new Array(Person);
     function showLinkItem(link) {
         for (var i = 0; i < link.length; i++) {
             var elem = "<div class=\"item-frame trans-all\">"
@@ -289,9 +280,6 @@
     }
     const query = Bmob.Query("link");
     query.find().then(res => {
-        // console.log(res)
-        // list = res;
-        //console.log(list[0].address);
         showLinkItem(res);
     });
 

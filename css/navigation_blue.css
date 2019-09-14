@@ -26,9 +26,7 @@ body {
 /*-----------------------------------HeadCSS-----------------------------------*/
 
 /*-----------------------------------------------------------------------------*/
-
-.top-frame p, .head p, .site-manage {
-    cursor: default;
+.top-frame {
 }
 
 .head {
@@ -118,7 +116,7 @@ body {
 
 /*-----------------------------------------------------------------------------*/
 
-.content-search, .top-frame {
+.content-search {
     font-size: 15px;
     width: 100%;
 }
@@ -257,19 +255,9 @@ body {
     }
 }
 
-.top-frame {
-    height: 40px;
-    text-align: center;
-    color: #fff;
-    overflow: hidden;
-    background: rgba(233, 233, 233, 0.4);
-    ;
-}
 
-.top-frame>p {
-    margin: 0;
-    padding: 10px;
-}
+
+
 
 /*--------------------------------------------------------------------------*/
 

@@ -30,9 +30,7 @@ input::-webkit-input-placeholder {
 /*-----------------------------------HeadCSS-----------------------------------*/
 
 /*-----------------------------------------------------------------------------*/
-
-.top-frame p, .head p, .site-manage {
-    cursor: default;
+.top-frame {
 }
 
 .head {
@@ -123,13 +121,10 @@ input::-webkit-input-placeholder {
 
 /*-----------------------------------------------------------------------------*/
 
-.content-search, .top-frame {
+.content-search{
     font-size: 15px;
     width: 100%;
 }
-
-.content-search {}
-
 .content-search>.search-text-frame {
     margin: 0 auto;
 }
@@ -247,19 +242,8 @@ input::-webkit-input-placeholder {
     }
 }
 
-.top-frame {
-    height: 40px;
-    text-align: center;
-    color: #fff;
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.3);
-    ;
-}
 
-.top-frame>p {
-    margin: 0;
-    padding: 10px;
-}
+
 
 /*--------------------------------------------------------------------------*/
 
