@@ -75,3 +75,7 @@ a, p, li, img {
 .foot-frame>p,.foot-frame>div{
     padding: 1px;
 }
+.foot-frame>p>a{
+    color:#fff;
+    text-decoration-line: none;
+}
