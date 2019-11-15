@@ -30,84 +30,12 @@ input::-webkit-input-placeholder {
 /*-----------------------------------HeadCSS-----------------------------------*/
 
 /*-----------------------------------------------------------------------------*/
-.top-frame {
-}
 
-.head {
-    text-align: center;
-    margin: 35px 5px;
-}
-
-.head>.title {
-    margin: 0 auto;
-    display: inline-block;
-    color: #fff;
-}
-
-.head>.title>img {
-    width: 300px;
-    height: 100px;
-    float: left;
-}
-
-.head>.title>h1 {
-    font-size: 40px;
-    margin: 5px;
-    float: left;
-}
 
 .head>.title>p {
-    float: left;
-    padding-top: 15px;
     color: rgba(255, 255, 255, 0.7);
 }
 
-.contrainer {
-    overflow: hidden;
-    padding: 5px;
-}
-
-.main-content {
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-@media (max-width: 480px) {
-    .head>.title>img {
-        width: 210px;
-        height: 70px;
-    }
-}
-
-@media (min-width: 480px) {
-    .head>.title>img {
-        width: 240px;
-        height: 80px;
-    }
-    .main-content {
-        width: 100%;
-    }
-}
-
-@media (min-width: 768px) {
-    .head>.title>img {
-        width: 270px;
-        height: 90px;
-    }
-    .main-content {
-        width: 736px;
-    }
-}
-
-@media (min-width: 980px) {
-    .head>.title>img {
-        width: 300px;
-        height: 100px;
-    }
-    .main-content {
-        width: 950px;
-    }
-}
 
 /*-----------------------------------------------------------------------------*/
 
