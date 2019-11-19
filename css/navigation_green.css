@@ -398,10 +398,6 @@ li {
 
 
 
-.tool-item-link-frame>.tool-item-frame {
-    width: 50%;
-}
-
 .tool-item-frame {
     width: 70px;
     float: left;
