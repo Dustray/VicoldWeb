@@ -6,6 +6,10 @@
 
 body {
     background-color: #ababab;
+    background-image:url(https://api.dujin.org/bing/1920.php);
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
 }
 
 .trans-all {
