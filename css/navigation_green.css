@@ -420,14 +420,10 @@ li {
 }
 
 .tool-item-frame>a>img {
-    width: 18px;
-    height: 18px;
+    width: 28px;
+    height: 28px;
     border: 0 solid #999;
-    padding: 10px;
     background-color: #999;
-    border-radius: 50px;
-    margin: 0 auto;
-    display: block;
 }
 
 .tool-item-frame>a>p {

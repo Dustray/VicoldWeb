@@ -435,14 +435,10 @@ li {
 }
 
 .tool-item-frame>a>img {
-    width: 14px;
-    height: 14px;
+    width: 24px;
+    height: 24px;
     border: 2px solid #ccc;
-    padding: 10px;
     background-color: #fff;
-    border-radius: 50px;
-    margin: 0 auto;
-    display: block;
 }
 
 .tool-item-frame>a>img:hover{

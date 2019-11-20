@@ -425,14 +425,10 @@ li {
 }
 
 .tool-item-frame>a>img {
-    width: 16px;
-    height: 16px;
+    width: 26px;
+    height: 26px;
     border: 2px solid rgba(60, 60, 60, 0.9);
     background-color: rgba(60, 60, 60, 0.7);
-    padding: 10px;
-    border-radius: 50px;
-    margin: 0 auto;
-    display: block;
 }
 
 .tool-item-frame>a>p {

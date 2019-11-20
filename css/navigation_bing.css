@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #ababab;
+    background-color: #fff;
     background-image:url(https://api.dujin.org/bing/1920.php);
     background-position:center;
     background-size:cover;
@@ -431,14 +431,10 @@ li {
 }
 
 .tool-item-frame>a>img {
-    width: 18px;
-    height: 18px;
+    width: 28px;
+    height: 28px;
     border: 0 solid #999;
-    padding: 10px;
     background-color: #fffa;
-    border-radius: 50px;
-    margin: 0 auto;
-    display: block;
 }
 
 .tool-item-frame>a>p {
