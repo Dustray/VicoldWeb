@@ -2,9 +2,7 @@ var currentstyle = -1;
 function showStyle(){
     var i = getCookie("currentstyle");
     currentstyle = i;
-    if (i != null) {
-        debugger;
-        if (i === "0") {//蓝色，默认
+        if (i == ""||i === "0") {//蓝色，默认
             $("body").css("background-color","#3c9bff");
             loadjscssfile("css/navigation_blue.css", "css")
             removejscssfile("css/navigation_black.css", "css")
@@ -44,8 +42,7 @@ function showStyle(){
             removejscssfile("css/navigation_black.css", "css")
             removejscssfile("css/navigation_red.css", "css")
             removejscssfile("css/navigation_bing.css", "css")
-        }else if (i === "99") {//Bing
-            
+        } else if (i === "99") {//Bing
             $("body").css("background-color","#ABABAB");
             $("body").css("background-image","url(https://api.dujin.org/bing/1920.php)");
             $("body").css("background-position","center");
@@ -58,7 +55,7 @@ function showStyle(){
             removejscssfile("css/navigation_red.css", "css")
             removejscssfile("css/navigation_yellow.css", "css")
         } else return;
-    }
+    
 }
 
 function changeStyle(type) {
