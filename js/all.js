@@ -3,6 +3,7 @@ function showStyle(){
     var i = getCookie("currentstyle");
     currentstyle = i;
     if (i != null) {
+        debugger;
         if (i === "0") {//蓝色，默认
             $("body").css("background-color","#3c9bff");
             loadjscssfile("css/navigation_blue.css", "css")
@@ -44,6 +45,7 @@ function showStyle(){
             removejscssfile("css/navigation_red.css", "css")
             removejscssfile("css/navigation_bing.css", "css")
         }else if (i === "99") {//Bing
+            
             $("body").css("background-color","#ABABAB");
             $("body").css("background-image","url(https://api.dujin.org/bing/1920.php)");
             $("body").css("background-position","center");
