@@ -1,7 +1,6 @@
 var currentstyle = -1;
 function showStyle(){
     var i = getCookie("currentstyle");
-    console.log(i+"sss");
     currentstyle = i;
     if (i != null) {
         if (i === "0") {//蓝色，默认
@@ -11,6 +10,7 @@ function showStyle(){
             removejscssfile("css/navigation_red.css", "css")
             removejscssfile("css/navigation_green.css", "css")
             removejscssfile("css/navigation_yellow.css", "css")
+            removejscssfile("css/navigation_bing.css", "css")
         } else if (i === "1") {//黑色
             $("body").css("background-color","#2f2f2f");
             loadjscssfile("css/navigation_black.css", "css")
@@ -18,6 +18,7 @@ function showStyle(){
             removejscssfile("css/navigation_blue.css", "css")
             removejscssfile("css/navigation_green.css", "css")
             removejscssfile("css/navigation_yellow.css", "css")
+            removejscssfile("css/navigation_bing.css", "css")
         } else if (i === "2") {//红色
             $("body").css("background-color","#ff3c3c");
             loadjscssfile("css/navigation_red.css", "css")
@@ -25,6 +26,7 @@ function showStyle(){
             removejscssfile("css/navigation_black.css", "css")
             removejscssfile("css/navigation_green.css", "css")
             removejscssfile("css/navigation_yellow.css", "css")
+            removejscssfile("css/navigation_bing.css", "css")
         } else if (i === "3") {//绿色
             $("body").css("background-color","#0dacb1");
             loadjscssfile("css/navigation_green.css", "css")
@@ -32,6 +34,7 @@ function showStyle(){
             removejscssfile("css/navigation_black.css", "css")
             removejscssfile("css/navigation_red.css", "css")
             removejscssfile("css/navigation_yellow.css", "css")
+            removejscssfile("css/navigation_bing.css", "css")
         } else if (i === "4") {//黄色
             $("body").css("background-color","#FFC107");
             loadjscssfile("css/navigation_yellow.css", "css")
@@ -39,12 +42,26 @@ function showStyle(){
             removejscssfile("css/navigation_blue.css", "css")
             removejscssfile("css/navigation_black.css", "css")
             removejscssfile("css/navigation_red.css", "css")
+            removejscssfile("css/navigation_bing.css", "css")
+        }else if (i === "99") {//Bing
+            $("body").css("background-color","#ABABAB");
+            $("body").css("background-image","url(https://api.dujin.org/bing/1920.php)");
+            $("body").css("background-position","center");
+            $("body").css("background-size","cover");
+            $("body").css("background-repeat","no-repeat");
+            loadjscssfile("css/navigation_bing.css", "css")
+            removejscssfile("css/navigation_green.css", "css")
+            removejscssfile("css/navigation_blue.css", "css")
+            removejscssfile("css/navigation_black.css", "css")
+            removejscssfile("css/navigation_red.css", "css")
+            removejscssfile("css/navigation_yellow.css", "css")
         } else return;
     }
 }
 
 function changeStyle(type) {
     if (currentstyle == type) return;
+    $("body").removeAttr("style"); 
     if (type == 0) {//蓝色，默认
         $("body").css("background-color","#3c9bff");
         loadjscssfile("css/navigation_blue.css", "css")
@@ -52,6 +69,7 @@ function changeStyle(type) {
         removejscssfile("css/navigation_red.css", "css")
         removejscssfile("css/navigation_green.css", "css")
         removejscssfile("css/navigation_yellow.css", "css")
+        removejscssfile("css/navigation_bing.css", "css")
     } else if (type == 1) {//黑色
         $("body").css("background-color","#2f2f2f");
         loadjscssfile("css/navigation_black.css", "css")
@@ -59,6 +77,7 @@ function changeStyle(type) {
         removejscssfile("css/navigation_blue.css", "css")
         removejscssfile("css/navigation_green.css", "css")
         removejscssfile("css/navigation_yellow.css", "css")
+        removejscssfile("css/navigation_bing.css", "css")
     } else if (type == 2) {//红色
         $("body").css("background-color","#ff3c3c");
         loadjscssfile("css/navigation_red.css", "css")
@@ -66,6 +85,7 @@ function changeStyle(type) {
         removejscssfile("css/navigation_black.css", "css")
         removejscssfile("css/navigation_green.css", "css")
         removejscssfile("css/navigation_yellow.css", "css")
+        removejscssfile("css/navigation_bing.css", "css")
     } else if (type == 3) {//绿色
         $("body").css("background-color","#0dacb1");
         loadjscssfile("css/navigation_green.css", "css")
@@ -73,6 +93,7 @@ function changeStyle(type) {
         removejscssfile("css/navigation_black.css", "css")
         removejscssfile("css/navigation_red.css", "css")
         removejscssfile("css/navigation_yellow.css", "css")
+        removejscssfile("css/navigation_bing.css", "css")
     } else if (type == 4) {//黄色
         $("body").css("background-color","#FFC107");
         loadjscssfile("css/navigation_yellow.css", "css")
@@ -80,6 +101,19 @@ function changeStyle(type) {
         removejscssfile("css/navigation_blue.css", "css")
         removejscssfile("css/navigation_black.css", "css")
         removejscssfile("css/navigation_red.css", "css")
+        removejscssfile("css/navigation_bing.css", "css")
+    }else if (type == 99) {//Bing
+        $("body").css("background-color","#ABABAB");
+        $("body").css("background-image","url(https://api.dujin.org/bing/1920.php)");
+        $("body").css("background-position","center");
+        $("body").css("background-size","cover");
+        $("body").css("background-repeat","no-repeat");
+        loadjscssfile("css/navigation_bing.css", "css")
+        removejscssfile("css/navigation_green.css", "css")
+        removejscssfile("css/navigation_blue.css", "css")
+        removejscssfile("css/navigation_black.css", "css")
+        removejscssfile("css/navigation_red.css", "css")
+        removejscssfile("css/navigation_yellow.css", "css")
     }else return;
     setCookie("currentstyle", type);
     currentstyle = type;
@@ -142,3 +176,5 @@ function getCookie(Name) {
     }
     return returnvalue;
 }
+
+

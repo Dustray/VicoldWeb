@@ -158,6 +158,12 @@ button,
 .tool-item-style-frame .style_yellow {
     background: #FFC107;
 }
+.tool-item-style-frame .style_bing {
+    background-image:url(../image/bing_btn_change.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 /* -------------------------------主题------------------------------- */
 
