@@ -388,7 +388,8 @@ li {
     float: left;
 }
 
-.tool-item-style-frame, .tool-item-link-frame {
+.tool-item-style-frame, 
+.tool-item-link-frame {
     text-align: center;
     overflow: hidden;
     background: #fff3;
@@ -404,7 +405,8 @@ li {
     margin-left: 5px;
 }
 
-.tool-item-style-frame>p, .tool-item-link-frame>p {
+.tool-item-style-frame>p,
+.tool-item-link-frame>p {
     color: #444;
     margin: 5px 0 0 0;
 }
@@ -446,9 +448,9 @@ li {
 }
 
 .tool-item-style-frame>.tool-item-frame>a>div {
-    width: 34px;
-    height: 34px;
-    border: 2px solid #fff;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #fff;
     border-radius: 50px;
     vertical-align: text-bottom;
     margin: 0 auto;
