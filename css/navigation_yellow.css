@@ -206,60 +206,29 @@ body {
 
 /*--------------------------------------------------------------------------*/
 
-ul, ol, li {
-    margin: 0;
-    padding: 0;
-}
-
-li {
-    list-style: none;
-}
 
 .tabs {
-    width: 100%;
-    border: 0 solid;
     border-radius: 6px;
     background: #fff;
-    margin-top: 30px;
-}
-.tabs >ul{
-    border-radius: 6px;
-
-}
-.tabs>div {
-    padding: 10px;
-    overflow: hidden;
 }
 
 .tabs .horizontal {
-    width: 100%;
-    display: block;
-    overflow: hidden;
+    border-radius: 6px;
 }
 
-.tabs .horizontal li {
-    float: left;
-    list-style: none;
-    height: 35px;
-    line-height: 35px;
+.tabs .horizontal li a {
+    border-radius: 0;
     background-color: rgba(233, 233, 233, 0.8);
-    width: 12.5%;
-    text-align: center;
-    cursor: pointer;
-    font-size: 15px;
     color: #4CAF50;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
 }
 
-.tabs .horizontal li:hover {
+.tabs .horizontal li a :hover {
     background-color: rgba(255, 255, 255, 0.8);
 }
 
-.tabs .horizontal li.selectActive {
+.tabs .horizontal li .active {
     background-color: rgb(230, 227, 177);
     color: #00796B;
-    cursor: default;
 }
 
 /*------------item------------*/
@@ -321,10 +290,6 @@ li {
     .item-frame>a>p {
         margin: 0;
         display: block;
-    }
-    .tabs .horizontal li {
-        height: 40px;
-        line-height: 40px;
     }
 }
 

@@ -190,60 +190,24 @@ body {
 
 /*--------------------------------------------------------------------------*/
 
-ul, ol, li {
-    margin: 0;
-    padding: 0;
-}
-
-li {
-    list-style: none;
-}
 
 .tabs {
-    width: 100%;
-    border: 0 solid;
     border-radius: 4px;
-    background: #f6f6f6;
-    margin-top: 30px;
-}
-.tabs >ul{
-    border-radius: 4px;
-
-}
-.tabs>div {
-    padding: 10px;
-    overflow: hidden;
 }
 
-.tabs .horizontal {
-    width: 100%;
-    display: block;
-    overflow: hidden;
-}
-
-.tabs .horizontal li {
-    float: left;
-    list-style: none;
-    height: 35px;
-    line-height: 35px;
+.tabs .horizontal li a {
+    border-radius: 0;
     background-color: rgba(233, 233, 233, 0.8);
-    width: 12.5%;
-    text-align: center;
-    cursor: pointer;
-    font-size: 15px;
     color: #0dacb1;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
 }
 
-.tabs .horizontal li:hover {
+.tabs .horizontal li a:hover {
     background-color: rgba(255, 255, 255, 0.8);
 }
 
-.tabs .horizontal li.selectActive {
+.tabs .horizontal li .active {
     background-color: rgba(226, 219, 190, 1);
     color: #0dacb1;
-    cursor: default;
 }
 
 /*------------item------------*/
@@ -288,7 +252,8 @@ li {
     /*手机屏幕，图标和文字上下排列*/
     .tabs {
         margin-top: 15px;
-    }
+    border-radius: 4px;
+}
     .item-frame {
         padding: 5px 5px;
         width: 25%;
@@ -306,22 +271,26 @@ li {
         margin: 0;
         display: block;
     }
-    .tabs .horizontal li {
-        height: 40px;
-        line-height: 40px;
-    }
 }
 
 @media (min-width: 480px) {
     .item-frame {
         width: 25%;
     }
+    
+.tabs {
+    border-radius: 4px;
+}
 }
 
 @media (min-width: 570px) {
     .item-frame {
         width: 20%;
     }
+    
+.tabs {
+    border-radius: 4px;
+}
 }
 
 @media (min-width: 768px) {
@@ -331,6 +300,10 @@ li {
     .item-frame>a {
         font-size: 17px;
     }
+    
+.tabs {
+    border-radius: 4px;
+}
 }
 
 @media (min-width: 980px) {
@@ -340,6 +313,10 @@ li {
     .item-frame>a {
         font-size: 17px;
     }
+    
+.tabs {
+    border-radius: 4px;
+}
 }
 
 /*---------------------------------------------------------------------------*/

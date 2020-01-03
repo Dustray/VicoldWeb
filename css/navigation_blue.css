@@ -209,57 +209,8 @@ body {
 
 /*--------------------------------------------------------------------------*/
 
-ul, ol, li {
-    margin: 0;
-    padding: 0;
-}
-
-li {
-    list-style: none;
-}
-
-.tabs {
-    width: 100%;
-    border: 0 solid;
-    border-radius: 0;
-    background: #f6f6f6;
-    margin-top: 30px;
-}
-
-.tabs>div {
-    padding: 10px;
-    overflow: hidden;
-}
-
-.tabs .horizontal {
-    width: 100%;
-    display: block;
-    overflow: hidden;
-}
-
-.tabs .horizontal li {
-    float: left;
-    list-style: none;
-    height: 35px;
-    line-height: 35px;
-    background-color: rgba(233, 233, 233, 0.8);
-    width: 12.5%;
-    text-align: center;
-    cursor: pointer;
-    font-size: 15px;
-    color: #3c9bff;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-}
-
-.tabs .horizontal li:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-.tabs .horizontal li.selectActive {
-    background-color: rgba(226, 219, 190, 1);
-    color: #3c9bff;
-    cursor: default;
+.tabs .horizontal li a{
+    border-radius:0 ;
 }
 
 /*------------item------------*/
@@ -320,10 +271,6 @@ li {
     .item-frame>a>p {
         margin: 0;
         display: block;
-    }
-    .tabs .horizontal li {
-        height: 40px;
-        line-height: 40px;
     }
 }
 

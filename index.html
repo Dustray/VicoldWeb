@@ -98,63 +98,44 @@
                 </div>
             </div>
             <div class="tabs trans-all" id="tabs">
-                <ul class='horizontal '>
-                    <li rel="tab-1" class="selectActive">综合</li>
-                    <li rel="tab-2">娱乐</li>
-                    <li rel="tab-3">资讯</li>
-                    <li rel="tab-4">影音</li>
-                    <li rel="tab-5">工具</li>
-                    <li rel="tab-6">开发</li>
-                    <li rel="tab-7">资源</li>
-                    <li rel="tab-8">教育</li>
+                <ul class=" horizontal nav  nav-pills" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link trans-all active" id="pills-home-tab" data-toggle="pill" href="#pills-1" role="tab" aria-controls="pills-1" aria-selected="true">综合</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link trans-all" id="pills-profile-tab" data-toggle="pill" href="#pills-2" role="tab" aria-controls="pills-2" aria-selected="false">娱乐</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-3" role="tab" aria-controls="pills-3" aria-selected="false">资讯</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-4" role="tab" aria-controls="pills-4" aria-selected="false">影音</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-5" role="tab" aria-controls="pills-5" aria-selected="false">工具</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-6" role="tab" aria-controls="pills-6" aria-selected="false">开发</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-7" role="tab" aria-controls="pills-7" aria-selected="false">资源</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-8" role="tab" aria-controls="pills-8" aria-selected="false">教育</a>
+                    </li>
                 </ul>
-                <!----------------------11111111111111111111---------------------->
-                <div rel='tab-1' id="tab-1">
-                    <!-- <div class="item-frame">
-                        <a href="https://s.weibo.com/top/summary?cate=realtimehot">
-                            <img
-                                src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554284896296&di=1213ee69dd88c9ff362feeb474e1a8dd&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F14%2F80%2F70%2F85e58PIC5Ri_1024.jpg" />
-                            微博热搜
-                        </a>
-                    </div> -->
-
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab"></div>
+                    <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab"></div>
+                    <div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-3-tab"></div>
+                    <div class="tab-pane fade" id="pills-4" role="tabpanel" aria-labelledby="pills-4-tab"></div>
+                    <div class="tab-pane fade" id="pills-5" role="tabpanel" aria-labelledby="pills-5-tab"></div>
+                    <div class="tab-pane fade" id="pills-6" role="tabpanel" aria-labelledby="pills-6-tab"></div>
+                    <div class="tab-pane fade" id="pills-7" role="tabpanel" aria-labelledby="pills-7-tab"></div>
+                    <div class="tab-pane fade" id="pills-8" role="tabpanel" aria-labelledby="pills-8-tab"></div>
                 </div>
-                <!----------------------22222222222222222222---------------------->
-                <div rel='tab-2' id="tab-2">
-
-                </div>
-                <!----------------------33333333333333333333---------------------->
-                <div rel='tab-3' id="tab-3">
-
-                </div>
-                <!----------------------44444444444444444444---------------------->
-                <div rel='tab-4' id="tab-4">
-
-                </div>
-                <!----------------------55555555555555555555---------------------->
-                <div rel='tab-5' id="tab-5">
-
-                </div>
-                <!----------------------66666666666666666666---------------------->
-                <div rel='tab-6' id="tab-6">
-
-                </div>
-                <!----------------------77777777777777777777---------------------->
-                <div rel='tab-7' id="tab-7">
-
-                </div>
-                <!----------------------88888888888888888888---------------------->
-                <div rel='tab-8' id="tab-8">
-
-                </div>
-
             </div>
             <!--End tabs-->
-
-            <!-- <div class="image">
-                <img
-                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1539083023061&di=fe74b9c32ab074772cf3c09621a801d4&imgtype=0&src=http%3A%2F%2Fg.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F78310a55b319ebc4092170d98926cffc1e171610.jpg" />
-            </div> -->
 
             <div class="site-manage trans-all">
                 <p>站点工具</p>
@@ -330,7 +311,7 @@
                 + "<img src=\" " + link[i].linkIcon + "\"  class=\"trans-all\"/><p>"
                 + link[i].linkName
                 + "</p></a> </div>";
-            $("#tab-" + link[i].linkType).append(elem);
+            $("#pills-" + link[i].linkType).append(elem);
         }
     }
     const query = Bmob.Query("link");

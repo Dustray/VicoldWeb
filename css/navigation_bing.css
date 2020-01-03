@@ -203,58 +203,27 @@ body {
 
 /*--------------------------------------------------------------------------*/
 
-ul, ol, li {
-    margin: 0;
-    padding: 0;
-}
 
-li {
-    list-style: none;
-}
 
 .tabs {
-    overflow: hidden;
-    width: 100%;
-    border: 0 solid;
     border-radius: 4px;
     background: #f6f6f6aa;
-    margin-top: 30px;
 }
 
-.tabs>div {
-    padding: 10px;
-    overflow: hidden;
-}
 
-.tabs .horizontal {
-    width: 100%;
-    display: block;
-    overflow: hidden;
-}
-
-.tabs .horizontal li {
-    float: left;
-    list-style: none;
-    height: 35px;
-    line-height: 35px;
+.tabs .horizontal li a{
     background-color: #fff7;
-    width: 12.5%;
-    text-align: center;
-    cursor: pointer;
-    font-size: 15px;
     color: #777;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
+    border-radius:0 ;
 }
 
-.tabs .horizontal li:hover {
+.tabs .horizontal li a:hover {
     background-color: #fffa;
 }
 
-.tabs .horizontal li.selectActive {
+.tabs .horizontal li .active {
     background-color: #fffc;
     color: #666;
-    cursor: default;
 }
 
 /*------------item------------*/
@@ -315,10 +284,6 @@ li {
     .item-frame>a>p {
         margin: 0;
         display: block;
-    }
-    .tabs .horizontal li {
-        height: 40px;
-        line-height: 40px;
     }
 }
 

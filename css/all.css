@@ -162,6 +162,85 @@ img,
 
 /* -------------------------------搜索建议------------------------------- */
 
+
+
+/* +++++++++++++++++++++++++++++++Tabs+++++++++++++++++++++++++++++++ */
+
+
+
+ul, ol, li {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.tabs {
+    overflow: hidden;
+    width: 100%;
+    border: 0 solid;
+    border-radius: 0;
+    background: #f6f6f6;
+    margin-top: 30px;
+}
+
+.tabs>div {
+    padding: 10px;
+    overflow: hidden;
+}
+
+.tabs .horizontal {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.tabs .horizontal li {
+    float: left;
+    list-style: none;
+    height: 35px;
+    width: 12.5%;
+}
+
+.tabs .horizontal li a{
+    margin: 0;
+    padding: 0;
+    background-color: rgba(233, 233, 233, 0.8);
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 15px;
+    color: #3c9bff;
+}
+
+.tabs .horizontal li a:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.tabs .horizontal li .active {
+    background-color: rgba(226, 219, 190, 1);
+    color: #3c9bff;
+    cursor: default;
+}
+@media (max-width: 480px) {
+    /*手机屏幕，图标和文字上下排列*/
+    .tabs .horizontal li {
+        height: 40px;
+    }
+    .tabs .horizontal li a{
+        height: 40px;
+        line-height: 40px;
+        font-size: 13px;
+
+    }
+}
+/* -------------------------------Tabs------------------------------- */
+
+
+
 /* +++++++++++++++++++++++++++++++主题+++++++++++++++++++++++++++++++ */
 
 .tool-item-style-frame>.tool-item-frame {

@@ -209,59 +209,27 @@ input::-webkit-input-placeholder {
 
 /*--------------------------------------------------------------------------*/
 
-ul, ol, li {
-    margin: 0;
-    padding: 0;
-}
-
-li {
-    list-style: none;
-}
-
 .tabs {
-    width: 100%;
-    border: 0 solid;
     border-radius: 20px;
     background-color: rgba(200, 200, 200, 0.3);
     margin-top: 15px;
 }
 
-.tabs>div {
-    padding: 10px;
-    overflow: hidden;
-}
 
-.tabs .horizontal {
-    width: 100%;
-    display: block;
-    overflow: hidden;
-}
-
-.tabs .horizontal li {
-    float: left;
-    list-style: none;
-    height: 35px;
-    line-height: 35px;
-    width: 12.5%;
-    border: 0 solid;
+.tabs .horizontal li a{
     border-radius: 20px;
-    text-align: center;
-    cursor: pointer;
-    font-size: 15px;
+    background-color: #0000;
     color: rgba(255, 255, 255, 0.9);
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
 }
 
-.tabs .horizontal li:hover {
+.tabs .horizontal li a:hover {
     background-color: rgba(200, 200, 200, 0.3);
     color: rgba(255, 255, 255, 0.9);
 }
 
-.tabs .horizontal li.selectActive {
+.tabs .horizontal li .active {
     background-color: rgba(226, 219, 190, 1);
     color: #555;
-    cursor: default;
 }
 
 /*------------item------------*/
@@ -314,13 +282,6 @@ li {
     /*手机屏幕，图标和文字上下排列*/
     .item-frame {
         width: 25%;
-    }
-    .item-frame>a>img {}
-    .item-frame>a>p {}
-    .tabs .horizontal li {
-        height: 40px;
-        line-height: 40px;
-        font-size: 13px;
     }
 }
 
