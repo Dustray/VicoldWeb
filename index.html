@@ -88,7 +88,7 @@
                     </div>
                 </div>
             </div>
-            <div class="collapse multi-collapse content-search trans-all" id="multiCollapseExample1">
+            <div class="collapse multi-collapse content-search trans-all" id="SuggestCollapse">
                 <div class="card card-body">
                     <div class="list-group">
                         <button type="button" class="list-group-item list-group-item-action"
@@ -242,10 +242,9 @@
 <script src="plugins/bootstrap/js/bootstrap.js"></script>
 <script src="js/Bmob-1.7.0.min.js"></script>
 <script>
-    var searchs = document.getElementById('search-text');
-    searchs.focus();
     function submit(type) {
-        var text = searchs.value;
+        debugger;
+        var text = document.getElementById('search-text').value;
         if (text == "") return; //为空不响应
         // if (text.focus()==false) return; //不聚焦不响应
         $("#search-text").select();
@@ -275,7 +274,8 @@
     }
     var secondKeyPressed = false;
     function _keydown() {
-        if (searchs == document.activeElement) {
+        var searchs =document.getElementById('search-text');
+        if ( searchs== document.activeElement) {
             if (event.keyCode == 13) {
                 submit(0);
             } else if (event.altKey) {
@@ -298,7 +298,9 @@
                 switch (event.keyCode) {
                     case 191:
                         searchs.focus();
-                        searchs.value = ""; break;//？
+                        searchs.value = "";
+                        $('#SuggestCollapse').collapse('hide');
+                         break;//？
                 }
             }
         }
@@ -306,11 +308,9 @@
     function onSearchChanged() {
         var text = document.getElementById('search-text').value;
         if (text == "") {
-            $('#multiCollapseExample1').collapse('hide');
+            $('#SuggestCollapse').collapse('hide');
             return; //为空不响应
-        } else {
-            $('#multiCollapseExample1').collapse('show');
-        }
+        } 
         searchSuggestion(text);
     }
 </script>
@@ -340,18 +340,20 @@
 
 <script>
     window.onload = function () {
-        // $('#multiCollapseExample1').collapse('show')
+        var searchs = document.getElementById('search-text');
+        searchs.focus();
     }
     var vm = new Vue({
         el: '#app',
         data: {
-            suggestionArray: ["1","2"],
+            suggestionArray: [],
         },
         mounted() {//启动时
         },
         methods: {
             addToInput(key) {
-                searchs.value = key;
+                document.getElementById('search-text').value = key;
+                submit(0);
             }
         },
         watch: {
@@ -370,6 +372,11 @@
             sug: function (json) {
                 console.log(json)
                 vm.suggestionArray = json.s;
+                if(json.s.length==0){
+                    $('#SuggestCollapse').collapse('hide');
+                }else{
+                     $('#SuggestCollapse').collapse('show');
+                }
             }
         }
 
