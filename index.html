@@ -9,8 +9,8 @@
     <meta name=”Description” Content="简洁、好看的网址导航">
     <title>微寒导航</title>
 
-    <link href="css/all.css" rel="stylesheet" type="text/css">
     <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/all.css" rel="stylesheet" type="text/css">
     <!-- <link href='css/navigation_black.css' rel='stylesheet' type='text/css'> -->
     <link rel="icon" href="image/logo.png" sizes="32x32">
     <script src="plugins/jquery/jquery.min.js"></script>
@@ -50,7 +50,7 @@
             <div class="content-search trans-all">
                 <div class="search-text-frame">
                     <input id="search-text" placeholder="请输入搜索内容" class=" search-text trans-all" type="text"
-                        autocomplete="off" onfocus="this.select()" oninput="onSearchChanged()" />
+                        autocomplete="off" onfocus="this.select()" oninput="onSearchChanged()" onBlur="onSearchUnFocus()"/>
                 </div>
 
                 <div class="search-submit-frame trans-all ">
@@ -89,7 +89,7 @@
                 </div>
             </div>
             <div class="collapse multi-collapse content-search trans-all" id="SuggestCollapse">
-                <div class="card card-body">
+                <div class="search-text-frame suggestion card card-body">
                     <div class="list-group">
                         <button type="button" class="list-group-item list-group-item-action"
                             v-for="(key, i) in suggestionArray" v-on:click="addToInput(key)"
@@ -243,7 +243,6 @@
 <script src="js/Bmob-1.7.0.min.js"></script>
 <script>
     function submit(type) {
-        debugger;
         var text = document.getElementById('search-text').value;
         if (text == "") return; //为空不响应
         // if (text.focus()==false) return; //不聚焦不响应
@@ -313,6 +312,9 @@
         } 
         searchSuggestion(text);
     }
+    function onSearchUnFocus(){
+        $('#SuggestCollapse').collapse('hide');
+    }
 </script>
 
 <script type="text/javascript">
@@ -353,6 +355,7 @@
         methods: {
             addToInput(key) {
                 document.getElementById('search-text').value = key;
+                    $('#SuggestCollapse').collapse('hide');
                 submit(0);
             }
         },
