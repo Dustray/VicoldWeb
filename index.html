@@ -18,7 +18,6 @@
     <script>
         window.onload = showStyle();
     </script>
-    <script src="js/tabulous.js"></script>
 </head>
 <style>
     .little-font {
@@ -41,7 +40,7 @@
     <div class="head trans-all">
         <div class="title" style="overflow:hidden;">
             <img draggable="false" src="https://image.dustray.cn/vicold/head_image.png" />
-            <p>v1.2.8</p>
+            <p>v1.3.0</p>
         </div>
         <!-- <p>vicold.com</p> -->
     </div>
@@ -50,7 +49,8 @@
             <div class="content-search trans-all">
                 <div class="search-text-frame">
                     <input id="search-text" placeholder="请输入搜索内容" class=" search-text trans-all" type="text"
-                        autocomplete="off" onfocus="this.select()" oninput="onSearchChanged()" onBlur="onSearchUnFocus()"/>
+                        autocomplete="off" onfocus="this.select()" oninput="onSearchChanged()"
+                        onBlur="onSearchUnFocus()" />
                 </div>
 
                 <div class="search-submit-frame trans-all ">
@@ -92,7 +92,7 @@
                 <div class="search-text-frame suggestion card card-body">
                     <div class="list-group">
                         <button type="button" class="list-group-item list-group-item-action"
-                            v-for="(key, i) in suggestionArray" v-on:click="addToInput(key)"
+                            v-for="(key, i) in suggestionArray" :id="getTimeListId(i)" v-on:click="addToInput(key)"
                             v-cloak>{{key}}</button>
                     </div>
                 </div>
@@ -100,32 +100,41 @@
             <div class="tabs trans-all" id="tabs">
                 <ul class=" horizontal nav  nav-pills" id="pills-tab" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link trans-all active" id="pills-home-tab" data-toggle="pill" href="#pills-1" role="tab" aria-controls="pills-1" aria-selected="true">综合</a>
+                        <a class="nav-link trans-all active" id="pills-home-tab" data-toggle="pill" href="#pills-1"
+                            role="tab" aria-controls="pills-1" aria-selected="true">综合</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link trans-all" id="pills-profile-tab" data-toggle="pill" href="#pills-2" role="tab" aria-controls="pills-2" aria-selected="false">娱乐</a>
+                        <a class="nav-link trans-all" id="pills-profile-tab" data-toggle="pill" href="#pills-2"
+                            role="tab" aria-controls="pills-2" aria-selected="false">娱乐</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-3" role="tab" aria-controls="pills-3" aria-selected="false">资讯</a>
+                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-3"
+                            role="tab" aria-controls="pills-3" aria-selected="false">资讯</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-4" role="tab" aria-controls="pills-4" aria-selected="false">影音</a>
+                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-4"
+                            role="tab" aria-controls="pills-4" aria-selected="false">影音</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-5" role="tab" aria-controls="pills-5" aria-selected="false">工具</a>
+                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-5"
+                            role="tab" aria-controls="pills-5" aria-selected="false">工具</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-6" role="tab" aria-controls="pills-6" aria-selected="false">开发</a>
+                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-6"
+                            role="tab" aria-controls="pills-6" aria-selected="false">开发</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-7" role="tab" aria-controls="pills-7" aria-selected="false">资源</a>
+                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-7"
+                            role="tab" aria-controls="pills-7" aria-selected="false">资源</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-8" role="tab" aria-controls="pills-8" aria-selected="false">教育</a>
+                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-8"
+                            role="tab" aria-controls="pills-8" aria-selected="false">教育</a>
                     </li>
                 </ul>
                 <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab"></div>
+                    <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab">
+                    </div>
                     <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab"></div>
                     <div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-3-tab"></div>
                     <div class="tab-pane fade" id="pills-4" role="tabpanel" aria-labelledby="pills-4-tab"></div>
@@ -223,6 +232,10 @@
 <script src="plugins/bootstrap/js/bootstrap.js"></script>
 <script src="js/Bmob-1.7.0.min.js"></script>
 <script>
+    window.onload = function () {
+        var searchs = document.getElementById('search-text');
+        searchs.focus();
+    }
     function submit(type) {
         var text = document.getElementById('search-text').value;
         if (text == "") return; //为空不响应
@@ -254,8 +267,8 @@
     }
     var secondKeyPressed = false;
     function _keydown() {
-        var searchs =document.getElementById('search-text');
-        if ( searchs== document.activeElement) {
+        var searchs = document.getElementById('search-text');
+        if (searchs == document.activeElement) {
             if (event.keyCode == 13) {
                 submit(0);
             } else if (event.altKey) {
@@ -269,6 +282,10 @@
                     case 77: submit(7); break;//m
                     case 191: searchs.value = ""; break;//？
                 }
+            } else if (event.keyCode == 38) {//上键
+                vm.preSuggest();
+            } else if (event.keyCode == 40) {//下键
+                vm.nextSuggest();
             }
         } else {
             if (event.keyCode == 13) {
@@ -279,8 +296,8 @@
                     case 191:
                         searchs.focus();
                         searchs.value = "";
-                        $('#SuggestCollapse').collapse('hide');
-                         break;//？
+                        HiddenSuggestion(true);
+                        break;//？
                 }
             }
         }
@@ -288,19 +305,16 @@
     function onSearchChanged() {
         var text = document.getElementById('search-text').value;
         if (text == "") {
-            $('#SuggestCollapse').collapse('hide');
+            HiddenSuggestion(true);
             return; //为空不响应
-        } 
+        }
         searchSuggestion(text);
     }
-    function onSearchUnFocus(){
-        $('#SuggestCollapse').collapse('hide');
+    function onSearchUnFocus() {
+        HiddenSuggestion(true);
     }
 </script>
 
-<script type="text/javascript">
-    tabs_takes.init("tabs");
-</script>
 
 <script>
     Bmob.initialize("3bd9d47d34a53d71e471d833b9b4ac6d", "17c0e0f3a6387f922e044502621a5d2a");
@@ -322,22 +336,49 @@
 </script>
 
 <script>
-    window.onload = function () {
-        var searchs = document.getElementById('search-text');
-        searchs.focus();
-    }
     var vm = new Vue({
         el: '#app',
         data: {
             suggestionArray: [],
+            lastActiveIndex: -1,
+            thisActiveIndex: -1,
         },
         mounted() {//启动时
         },
         methods: {
             addToInput(key) {
                 document.getElementById('search-text').value = key;
-                    $('#SuggestCollapse').collapse('hide');
+                HiddenSuggestion(true);
                 submit(0);
+            },
+            preSuggest() {
+                var lastI = this.lastActiveIndex;
+                var thisI = this.thisActiveIndex;
+                this.lastActiveIndex = thisI;
+                if (thisI == -1 || thisI == 0) {
+                    this.thisActiveIndex = this.suggestionArray.length - 1;
+                } else {
+                    this.thisActiveIndex--;
+                }
+                $("#suggestBtn-" + this.lastActiveIndex).removeClass("active");
+                $("#suggestBtn-" + this.thisActiveIndex).addClass("active");
+                document.getElementById('search-text').value = this.suggestionArray[this.thisActiveIndex];
+            },
+            nextSuggest() {
+                var lastI = this.lastActiveIndex;
+                var thisI = this.thisActiveIndex;
+                this.lastActiveIndex = thisI;
+                if (thisI == -1 || thisI == this.suggestionArray.length - 1) {
+                    this.thisActiveIndex = 0;
+                } else {
+                    this.thisActiveIndex++;
+                }
+                $("#suggestBtn-" + this.lastActiveIndex).removeClass("active");
+                $("#suggestBtn-" + this.thisActiveIndex).addClass("active");
+                document.getElementById('search-text').value = this.suggestionArray[this.thisActiveIndex];
+            },
+            getTimeListId(i) {
+                return "suggestBtn-" + i;
             }
         },
         watch: {
@@ -356,10 +397,10 @@
             sug: function (json) {
                 console.log(json)
                 vm.suggestionArray = json.s;
-                if(json.s.length==0){
-                    $('#SuggestCollapse').collapse('hide');
-                }else{
-                     $('#SuggestCollapse').collapse('show');
+                if (json.s.length == 0) {
+                    HiddenSuggestion(true);
+                } else {
+                    HiddenSuggestion(false);
                 }
             }
         }
@@ -369,6 +410,16 @@
         script.src = sugurl;
         document.getElementsByTagName("head")[0].appendChild(script);
 
+    }
+    function HiddenSuggestion(isHidden) {
+        if (isHidden) {//隐藏
+            $('#SuggestCollapse').collapse('hide');
+            vm.suggestionArray = [];
+            vm.lastActiveIndex = -1;
+            vm.thisActiveIndex = -1;
+        } else {
+            $('#SuggestCollapse').collapse('show');
+        }
     }
 </script>
 
