@@ -193,6 +193,10 @@ body {
 
 /* +++++++++++++++++++++++++++++++搜索建议+++++++++++++++++++++++++++++++ */
 
+
+.collapse{
+    margin-top: 0;
+}
 .suggestion{
     border-radius:0 ;
     background-color:#eee;

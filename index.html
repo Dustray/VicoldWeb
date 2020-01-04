@@ -91,7 +91,7 @@
             <div class="collapse multi-collapse content-search trans-all" id="SuggestCollapse">
                 <div class="search-text-frame suggestion card card-body">
                     <div class="list-group">
-                        <button type="button" class="list-group-item list-group-item-action"
+                        <button type="button" class="list-group-item list-group-item-action" onmouseout="onMouseOutSuggestion()" onmouseover="onMouseInSuggestion()"
                             v-for="(key, i) in suggestionArray" :id="getTimeListId(i)" v-on:click="addToInput(key)"
                             v-cloak>{{key}}</button>
                     </div>
@@ -310,8 +310,17 @@
         }
         searchSuggestion(text);
     }
+    var ismouseInSuggestion = false;
     function onSearchUnFocus() {
-        HiddenSuggestion(true);
+        if(!ismouseInSuggestion){ 
+            HiddenSuggestion(true);
+        }           
+    }
+    function onMouseInSuggestion() {
+        ismouseInSuggestion=true;
+    }
+    function onMouseOutSuggestion() {
+        ismouseInSuggestion=false;
     }
 </script>
 
@@ -396,10 +405,10 @@
         window.baidu = {
             sug: function (json) {
                 console.log(json)
-                vm.suggestionArray = json.s;
                 if (json.s.length == 0) {
                     HiddenSuggestion(true);
                 } else {
+                    vm.suggestionArray = json.s;
                     HiddenSuggestion(false);
                 }
             }
