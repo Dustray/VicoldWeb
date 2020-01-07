@@ -241,10 +241,7 @@
         if (text == "") return; //为空不响应
         // if (text.focus()==false) return; //不聚焦不响应
         $("#search-text").select();
-        text = text.replace("%", "%25");
-        text = text.replace("#", "%23");
-        text = text.replace("$", "%24");
-        text = text.replace("&", "%26");
+        text = strReplace(text);
         switch (type) {
             case 0:
                 window.open("https://baidu.com/s?word=" + text); break;
@@ -399,7 +396,7 @@
     function searchSuggestion(key) {
         //组装查询地址
         var sugurl = "https://suggestion.baidu.com/su?wd=#content#&cb=window.baidu.sug";
-        var content = key;
+        var content = strReplace(key);
         sugurl = sugurl.replace("#content#", content);
         //定义回调函数
         window.baidu = {
@@ -429,6 +426,13 @@
         } else {
             $('#SuggestCollapse').collapse('show');
         }
+    }
+    function strReplace(text){
+        text = text.replace("%", "%25");
+        text = text.replace("#", "%23");
+        text = text.replace("$", "%24");
+        text = text.replace("&", "%26");
+        return text;
     }
 </script>
 
