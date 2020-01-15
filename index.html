@@ -26,7 +26,7 @@
         -webkit-transform: scale(0.90);
         display: inline-block;
     }
-
+    
     [v-cloak] {
         display: none !important;
     }
@@ -34,8 +34,7 @@
 
 <body onkeydown="_keydown()" class="trans-all">
     <div class="top-frame">
-        <p>为何我<span class="little-font">(灵魂)</span>是我<span class="little-font">(肉体)</span>，而不是你<span
-                class="little-font">(肉体)</span></p>
+        <p>为何我<span class="little-font">(灵魂)</span>是我<span class="little-font">(肉体)</span>，而不是你<span class="little-font">(肉体)</span></p>
     </div>
     <div class="head trans-all">
         <div class="title" style="overflow:hidden;">
@@ -48,88 +47,68 @@
         <div class="main-content">
             <div class="content-search trans-all">
                 <div class="search-text-frame">
-                    <input id="search-text" placeholder="请输入搜索内容" class=" search-text trans-all" type="text"
-                        autocomplete="off" onfocus="this.select()" oninput="onSearchChanged()"
-                        onBlur="onSearchUnFocus()" />
+                    <input id="search-text" placeholder="请输入搜索内容" class=" search-text trans-all" type="text" autocomplete="off" onfocus="this.select()" oninput="onSearchChanged()" onBlur="onSearchUnFocus()" />
                 </div>
 
                 <div class="search-submit-frame trans-all ">
                     <div>
-                        <input id="search-submit" class="search-submit  trans-all " type="button" title="Enter"
-                            onclick="submit(0)" value="百度" />
+                        <input id="search-submit" class="search-submit  trans-all " type="button" title="Enter" onclick="submit(0)" value="百度" />
                     </div>
                     <div>
-                        <input id="search-submit" class="search-submit trans-all" type="button" title="Alt+Z"
-                            onclick="submit(1)" value="必应" />
+                        <input id="search-submit" class="search-submit trans-all" type="button" title="Alt+Z" onclick="submit(1)" value="必应" />
                     </div>
                     <div>
-                        <input id="search-submit" class="search-submit trans-all" type="button" title="Alt+X"
-                            onclick="submit(2)" value="谷歌" />
+                        <input id="search-submit" class="search-submit trans-all" type="button" title="Alt+X" onclick="submit(2)" value="谷歌" />
                     </div>
                     <div>
-                        <input id="search-submit" class="search-submit trans-all" type="button" title="Alt+C"
-                            onclick="submit(3)" value="GitHub" />
+                        <input id="search-submit" class="search-submit trans-all" type="button" title="Alt+C" onclick="submit(3)" value="GitHub" />
                     </div>
                     <div>
-                        <input id="search-submit" class="search-submit trans-all" type="button" title="Alt+V"
-                            onclick="submit(4)" value="磁力" />
+                        <input id="search-submit" class="search-submit trans-all" type="button" title="Alt+V" onclick="submit(4)" value="磁力" />
                     </div>
                     <div>
-                        <input id="search-submit" class="search-submit trans-all" type="button" title="Alt+B"
-                            onclick="submit(5)" value="图片" />
+                        <input id="search-submit" class="search-submit trans-all" type="button" title="Alt+B" onclick="submit(5)" value="图片" />
                     </div>
                     <div>
-                        <input id="search-submit" class="search-submit trans-all" type="button" title="Alt+N"
-                            onclick="submit(6)" value="词典" />
+                        <input id="search-submit" class="search-submit trans-all" type="button" title="Alt+N" onclick="submit(6)" value="词典" />
                     </div>
                     <div>
-                        <input id="search-submit" class="search-submit trans-all" type="button" title="Alt+M"
-                            onclick="submit(7)" value="翻译" />
+                        <input id="search-submit" class="search-submit trans-all" type="button" title="Alt+M" onclick="submit(7)" value="翻译" />
                     </div>
                 </div>
             </div>
             <div class="collapse multi-collapse content-search trans-all" id="SuggestCollapse">
                 <div class="search-text-frame suggestion card card-body">
                     <div class="list-group">
-                        <button type="button" class="list-group-item list-group-item-action" onmouseout="onMouseOutSuggestion()" onmouseover="onMouseInSuggestion()"
-                            v-for="(key, i) in suggestionArray" :id="getTimeListId(i)" v-on:click="addToInput(key)"
-                            v-cloak>{{key}}</button>
+                        <button type="button" class="list-group-item list-group-item-action" onmouseout="onMouseOutSuggestion()" onmouseover="onMouseInSuggestion()" v-for="(key, i) in suggestionArray" :id="getTimeListId(i)" v-on:click="addToInput(key)" v-cloak>{{key}}</button>
                     </div>
                 </div>
             </div>
             <div class="tabs trans-all" id="tabs">
                 <ul class=" horizontal nav  nav-pills" id="pills-tab" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link trans-all active" id="pills-home-tab" data-toggle="pill" href="#pills-1"
-                            role="tab" aria-controls="pills-1" aria-selected="true">综合</a>
+                        <a class="nav-link trans-all active" id="pills-home-tab" data-toggle="pill" href="#pills-1" role="tab" aria-controls="pills-1" aria-selected="true">综合</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link trans-all" id="pills-profile-tab" data-toggle="pill" href="#pills-2"
-                            role="tab" aria-controls="pills-2" aria-selected="false">娱乐</a>
+                        <a class="nav-link trans-all" id="pills-profile-tab" data-toggle="pill" href="#pills-2" role="tab" aria-controls="pills-2" aria-selected="false">娱乐</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-3"
-                            role="tab" aria-controls="pills-3" aria-selected="false">资讯</a>
+                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-3" role="tab" aria-controls="pills-3" aria-selected="false">资讯</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-4"
-                            role="tab" aria-controls="pills-4" aria-selected="false">影音</a>
+                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-4" role="tab" aria-controls="pills-4" aria-selected="false">影音</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-5"
-                            role="tab" aria-controls="pills-5" aria-selected="false">工具</a>
+                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-5" role="tab" aria-controls="pills-5" aria-selected="false">工具</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-6"
-                            role="tab" aria-controls="pills-6" aria-selected="false">开发</a>
+                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-6" role="tab" aria-controls="pills-6" aria-selected="false">开发</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-7"
-                            role="tab" aria-controls="pills-7" aria-selected="false">资源</a>
+                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-7" role="tab" aria-controls="pills-7" aria-selected="false">资源</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-8"
-                            role="tab" aria-controls="pills-8" aria-selected="false">教育</a>
+                        <a class="nav-link trans-all" id="pills-contact-tab" data-toggle="pill" href="#pills-8" role="tab" aria-controls="pills-8" aria-selected="false">教育</a>
                     </li>
                 </ul>
                 <div class="tab-content" id="pills-tabContent">
@@ -189,23 +168,18 @@
                         <div class="tool-item-link-frame trans-all">
                             <p>网站工具</p>
                             <div class="tool-item-frame">
-                                <a target="_blank"
-                                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__cwTRKlURFJBSTAzV1FPSkM0VjM1RzVLOUdWNTdWNS4u">
-                                    <img class="trans-all" src="image/add.png" />
-                                    推荐链接
+                                <a target="_blank" href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__cwTRKlURFJBSTAzV1FPSkM0VjM1RzVLOUdWNTdWNS4u">
+                                    <img class="trans-all" src="image/add.png" /> 推荐链接
                                 </a>
                             </div>
                             <div class="tool-item-frame">
-                                <a target="_blank"
-                                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__cwTRKlUNjJJTk5HVlg3NThDTFlPRFhVU0NGMUFSUy4u">
-                                    <img class="trans-all" src="image/feedback.png" />
-                                    反馈建议
+                                <a target="_blank" href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__cwTRKlUNjJJTk5HVlg3NThDTFlPRFhVU0NGMUFSUy4u">
+                                    <img class="trans-all" src="image/feedback.png" /> 反馈建议
                                 </a>
                             </div>
                             <div class="tool-item-frame">
                                 <a target="_blank" href="./about.html">
-                                    <img class="trans-all" src="image/about.png" />
-                                    关于
+                                    <img class="trans-all" src="image/about.png" /> 关于
                                 </a>
                             </div>
                         </div>
@@ -217,13 +191,10 @@
         </div>
     </div>
     <div class="foot-frame">
-        <div id="myssl_seal" style="text-align: center"><img title="MySSL 安全签章"
-                onclick="window.open('https://myssl.com/seal/detail?domain=vicold.com','MySSL安全签章','height=800,width=470,top=0,right=0,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no')"
-                draggable="false" src="https://sealres.myssl.com/seal/img/2x/seal.png?domain=vicold.com"
+        <div id="myssl_seal" style="text-align: center"><img title="MySSL 安全签章" onclick="window.open('https://myssl.com/seal/detail?domain=vicold.com','MySSL安全签章','height=800,width=470,top=0,right=0,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no')" draggable="false" src="https://sealres.myssl.com/seal/img/2x/seal.png?domain=vicold.com"
                 alt="MySSL 安全签章" style="width: 100px; height: auto; cursor: pointer"></div>
-        <p>Copyright © 2019 vicold.com
-            <script type="text/javascript"
-                src="https://s4.cnzz.com/z_stat.php?id=1278024757&web_id=1278024757"></script>
+        <p>Copyright © 2019-2020 vicold.com
+            <script type="text/javascript" src="https://s4.cnzz.com/z_stat.php?id=1278024757&web_id=1278024757"></script>
         </p>
     </div>
 </body>
@@ -232,10 +203,11 @@
 <script src="plugins/bootstrap/js/bootstrap.js"></script>
 <script src="js/Bmob-1.7.0.min.js"></script>
 <script>
-    window.onload = function () {
+    window.onload = function() {
         var searchs = document.getElementById('search-text');
         searchs.focus();
     }
+
     function submit(type) {
         var text = document.getElementById('search-text').value;
         if (text == "") return; //为空不响应
@@ -244,25 +216,34 @@
         text = strReplace(text);
         switch (type) {
             case 0:
-                window.open("https://baidu.com/s?word=" + text); break;
+                window.open("https://baidu.com/s?word=" + text);
+                break;
             case 1:
-                window.open("https://cn.bing.com/search?q=" + text); break;
+                window.open("https://cn.bing.com/search?q=" + text);
+                break;
             case 2:
-                window.open("https://www.google.com/search?q=" + text); break;
+                window.open("https://www.google.com/search?q=" + text);
+                break;
             case 3:
-                window.open("https://github.com/search?q=" + text); break;
+                window.open("https://github.com/search?q=" + text);
+                break;
             case 4:
-                window.open("https://www.cilimao.website/search?word=" + text); break;
+                window.open("https://www.cilimao.website/search?word=" + text);
+                break;
             case 5:
-                window.open("https://image.baidu.com/search/index?tn=baiduimage&word=" + text); break;
+                window.open("https://image.baidu.com/search/index?tn=baiduimage&word=" + text);
+                break;
             case 6:
-                window.open("https://cn.bing.com/dict/search?q=" + text); break;
+                window.open("https://cn.bing.com/dict/search?q=" + text);
+                break;
             case 7:
-                window.open("https://fanyi.baidu.com/?aldtype=85#zh/en/" + text); break;
+                window.open("https://fanyi.baidu.com/?aldtype=85#zh/en/" + text);
+                break;
         }
 
     }
     var secondKeyPressed = false;
+
     function _keydown() {
         var searchs = document.getElementById('search-text');
         if (searchs == document.activeElement) {
@@ -270,18 +251,34 @@
                 submit(0);
             } else if (event.altKey) {
                 switch (event.keyCode) {
-                    case 90: submit(1); break;//z
-                    case 88: submit(2); break;//x
-                    case 67: submit(3); break;//c
-                    case 86: submit(4); break;//v
-                    case 66: submit(5); break;//b
-                    case 78: submit(6); break;//n
-                    case 77: submit(7); break;//m
-                    case 191: searchs.value = ""; break;//？
+                    case 90:
+                        submit(1);
+                        break; //z
+                    case 88:
+                        submit(2);
+                        break; //x
+                    case 67:
+                        submit(3);
+                        break; //c
+                    case 86:
+                        submit(4);
+                        break; //v
+                    case 66:
+                        submit(5);
+                        break; //b
+                    case 78:
+                        submit(6);
+                        break; //n
+                    case 77:
+                        submit(7);
+                        break; //m
+                    case 191:
+                        searchs.value = "";
+                        break; //？
                 }
-            } else if (event.keyCode == 38) {//上键
+            } else if (event.keyCode == 38) { //上键
                 vm.preSuggest();
-            } else if (event.keyCode == 40) {//下键
+            } else if (event.keyCode == 40) { //下键
                 vm.nextSuggest();
             }
         } else {
@@ -294,11 +291,12 @@
                         searchs.focus();
                         searchs.value = "";
                         HiddenSuggestion(true);
-                        break;//？
+                        break; //？
                 }
             }
         }
     }
+
     function onSearchChanged() {
         var text = document.getElementById('search-text').value;
         if (text == "") {
@@ -308,29 +306,33 @@
         searchSuggestion(text);
     }
     var ismouseInSuggestion = false;
+
     function onSearchUnFocus() {
-        if(!ismouseInSuggestion){ 
+        if (!ismouseInSuggestion) {
             HiddenSuggestion(true);
-        }           
+        }
     }
+
     function onMouseInSuggestion() {
-        ismouseInSuggestion=true;
+        ismouseInSuggestion = true;
     }
+
     function onMouseOutSuggestion() {
-        ismouseInSuggestion=false;
+        ismouseInSuggestion = false;
     }
 </script>
 
 
 <script>
     Bmob.initialize("3bd9d47d34a53d71e471d833b9b4ac6d", "17c0e0f3a6387f922e044502621a5d2a");
+
     function showLinkItem(link) {
         for (var i = 0; i < link.length; i++) {
-            var elem = "<div class=\"item-frame trans-all\">"
-                + "<a href=\"" + link[i].address + "\"  target=\"_blank\">"
-                + "<img src=\" " + link[i].linkIcon + "\"  class=\"trans-all\"/><p>"
-                + link[i].linkName
-                + "</p></a> </div>";
+            var elem = "<div class=\"item-frame trans-all\">" +
+                "<a href=\"" + link[i].address + "\"  target=\"_blank\">" +
+                "<img src=\" " + link[i].linkIcon + "\"  class=\"trans-all\"/><p>" +
+                link[i].linkName +
+                "</p></a> </div>";
             $("#pills-" + link[i].linkType).append(elem);
         }
     }
@@ -338,7 +340,6 @@
     query.find().then(res => {
         showLinkItem(res);
     });
-
 </script>
 
 <script>
@@ -349,7 +350,7 @@
             lastActiveIndex: -1,
             thisActiveIndex: -1,
         },
-        mounted() {//启动时
+        mounted() { //启动时
         },
         methods: {
             addToInput(key) {
@@ -400,7 +401,7 @@
         sugurl = sugurl.replace("#content#", content);
         //定义回调函数
         window.baidu = {
-            sug: function (json) {
+            sug: function(json) {
                 console.log(json)
                 if (json.s.length == 0) {
                     HiddenSuggestion(true);
@@ -417,8 +418,9 @@
         document.getElementsByTagName("head")[0].appendChild(script);
 
     }
+
     function HiddenSuggestion(isHidden) {
-        if (isHidden) {//隐藏
+        if (isHidden) { //隐藏
             $('#SuggestCollapse').collapse('hide');
             vm.suggestionArray = [];
             vm.lastActiveIndex = -1;
@@ -427,7 +429,8 @@
             $('#SuggestCollapse').collapse('show');
         }
     }
-    function strReplace(text){
+
+    function strReplace(text) {
         text = text.replace("%", "%25");
         text = text.replace("#", "%23");
         text = text.replace("$", "%24");
