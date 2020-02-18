@@ -431,10 +431,10 @@
     }
 
     function strReplace(text) {
-        text = text.replace("%", "%25");
-        text = text.replace("#", "%23");
-        text = text.replace("$", "%24");
-        text = text.replace("&", "%26");
+        text = text.replace(/%/g, "%25");
+        text = text.replace(/#/g, "%23");
+        text = text.replace(/\$/g, "%24");
+        text = text.replace(/&/g, "%26");
         return text;
     }
 </script>
