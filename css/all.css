@@ -1,9 +1,9 @@
 html{
-    filter: grayscale(100%);
+    /* filter: grayscale(100%);
     -moz-filter: grayscale(100%);
     -o-filter: grayscale(100%);
     -webkit-filter: grayscale(1);
-    filter: progid:DXImageTransform.Microsoft.BasicImage(graysale=1);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(graysale=1); */
 }
 body {
     background-image: url(../image/background_continuity_common.png);
