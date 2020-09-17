@@ -63,7 +63,7 @@ function changeStyle(type) {
         removejscssfile("css/navigation_bing.css", "css")
     }else if (type == 99) {//Bing
         $("body").css("background-color","#ABABAB");
-        $("body").css("background-image","url(https://api.dujin.org/bing/1920.php)");
+        $("body").css("background-image","url(https://shadowq.com/api/bing/bing.php)");
         $("body").css("background-position","center");
         $("body").css("background-size","cover");
         $("body").css("background-repeat","no-repeat");
@@ -109,7 +109,7 @@ function removejscssfile(filename, filetype) {
 
 //设置cookies
 function setCookie(name, value) {
-    var Days = 30;
+    var Days = 365;
     var exp = new Date();
     exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
     //alert(value+ name + "=" + escape(value) + ";expires=" + exp.toGMTString());
