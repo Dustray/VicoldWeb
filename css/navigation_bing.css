@@ -9,7 +9,7 @@
 
 body {
     background-color: #fff;
-    background-image: url(https://open.saintic.com/api/bingPic/);
+    background-image: url(https://api.dujin.org/bing/1920.php);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
