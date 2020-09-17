@@ -63,7 +63,7 @@ function changeStyle(type) {
         removejscssfile("css/navigation_bing.css", "css")
     }else if (type == 99) {//Bing
         $("body").css("background-color","#ABABAB");
-        $("body").css("background-image","url(https://shadowq.com/api/bing/bing.php)");
+        $("body").css("background-image","url(https://api.dujin.org/bing/1920.php)");
         $("body").css("background-position","center");
         $("body").css("background-size","cover");
         $("body").css("background-repeat","no-repeat");
