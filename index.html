@@ -34,13 +34,13 @@
 
 <body onkeydown="_keydown()" class="trans-all">
     <div class="top-frame">
-        <p>众生皆苦 余生安好</p>
+        <p>shxxxxt</p>
         <!-- <p>为何我<span class="little-font">(灵魂)</span>是我<span class="little-font">(肉体)</span>，而不是你<span class="little-font">(肉体)</span></p> -->
     </div>
     <div class="head trans-all">
         <div class="title" style="overflow:hidden;">
             <img draggable="false" src="https://image.dustray.cn/vicold/head_image.png" />
-            <p>v1.3.1</p>
+            <p>v1.3.2</p>
         </div>
         <!-- <p>vicold.com</p> -->
     </div>
@@ -434,6 +434,8 @@
         text = text.replace(/#/g, "%23");
         text = text.replace(/\$/g, "%24");
         text = text.replace(/&/g, "%26");
+        text = text.replace(/\+/g, "%2B");
+        text = text.replace(/@/g, "%40");
         return text;
     }
 </script>
